@@ -305,4 +305,27 @@
     <priority>0.9</priority>
   </url>
   
+  <!-- ROI Calculator -->
+  <url>
+    <loc>https://www.vertvista.com/roi-calculator.html</loc>
+    <lastmod>2025-12-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- New Blog Posts - December 2025 -->
+  <url>
+    <loc>https://www.vertvista.com/pet-friendly-office-plants-india.html</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.vertvista.com/biophilic-design-trends-2025-india.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset>

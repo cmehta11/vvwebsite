@@ -1,0 +1,933 @@
+/**
+ * Vertvista Website Enhancements CSS
+ * Features: Page Loader, AOS Animations, Lightbox, Dark Mode, WhatsApp Widget, etc.
+ */
+
+/* ==========================================
+   1. PAGE LOADER
+   ========================================== */
+#page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2D5016 0%, #3D6B1F 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#page-loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+    color: white;
+}
+
+.loader-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top-color: #CCFF00;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.loader-content p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #CCFF00;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   2. AOS ANIMATIONS
+   ========================================== */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Fade animations */
+[data-aos="fade-up"] {
+    transform: translateY(40px);
+}
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos="fade-down"] {
+    transform: translateY(-40px);
+}
+[data-aos="fade-down"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(40px);
+}
+[data-aos="fade-left"].aos-animate {
+    transform: translateX(0);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-40px);
+}
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0);
+}
+
+/* Zoom animations */
+[data-aos="zoom-in"] {
+    transform: scale(0.9);
+}
+[data-aos="zoom-in"].aos-animate {
+    transform: scale(1);
+}
+
+[data-aos="zoom-out"] {
+    transform: scale(1.1);
+}
+[data-aos="zoom-out"].aos-animate {
+    transform: scale(1);
+}
+
+/* Flip animations */
+[data-aos="flip-up"] {
+    transform: perspective(2500px) rotateX(-100deg);
+}
+[data-aos="flip-up"].aos-animate {
+    transform: perspective(2500px) rotateX(0);
+}
+
+/* Slide animations */
+[data-aos="slide-up"] {
+    transform: translateY(100%);
+}
+[data-aos="slide-up"].aos-animate {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   3. LIGHTBOX GALLERY
+   ========================================== */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-container {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    max-width: 600px;
+}
+
+.lightbox-counter {
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: #CCFF00;
+    color: #2D5016;
+}
+
+.lightbox-close {
+    top: -50px;
+    right: 0;
+    font-size: 35px;
+    padding: 10px 18px;
+}
+
+.lightbox-prev {
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
+    .lightbox-close { top: 10px; right: 10px; }
+}
+
+/* ==========================================
+   4. LAZY LOADING
+   ========================================== */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+img.lazy-loaded {
+    opacity: 1;
+}
+
+/* ==========================================
+   5. DARK MODE
+   ========================================== */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2D5016, #3D6B1F);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9997;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.dark-mode-toggle .fa-moon {
+    color: #CCFF00;
+    font-size: 20px;
+}
+
+.dark-mode-toggle .fa-sun {
+    display: none;
+    color: #FFD700;
+    font-size: 20px;
+}
+
+body.dark-mode .dark-mode-toggle .fa-moon {
+    display: none;
+}
+
+body.dark-mode .dark-mode-toggle .fa-sun {
+    display: block;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background: #16213e;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .nav-link {
+    color: #e0e0e0;
+}
+
+body.dark-mode .dropdown-menu {
+    background: #1a1a2e;
+    border-color: #2d3a4f;
+}
+
+body.dark-mode .dropdown-menu a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .dropdown-menu a:hover {
+    background: #2d3a4f;
+}
+
+body.dark-mode section {
+    background-color: #1a1a2e;
+}
+
+body.dark-mode .section-header h2,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: #ffffff;
+}
+
+body.dark-mode p {
+    color: #b0b0b0;
+}
+
+body.dark-mode .card,
+body.dark-mode .service-card,
+body.dark-mode .feature-card,
+body.dark-mode .blog-card {
+    background: #16213e;
+    border-color: #2d3a4f;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .bg-light {
+    background-color: #16213e !important;
+}
+
+body.dark-mode footer {
+    background: #0f0f23;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #16213e;
+    border-color: #2d3a4f;
+    color: #e0e0e0;
+}
+
+/* ==========================================
+   6. WHATSAPP WIDGET
+   ========================================== */
+.whatsapp-widget {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9998;
+}
+
+.whatsapp-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-btn i {
+    color: white;
+    font-size: 32px;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    background: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.whatsapp-popup {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.whatsapp-popup-header {
+    background: #075E54;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.whatsapp-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    padding: 8px;
+}
+
+.whatsapp-popup-title strong {
+    display: block;
+    font-size: 16px;
+}
+
+.whatsapp-popup-title span {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.whatsapp-popup-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.whatsapp-popup-body {
+    padding: 20px;
+    background: #E5DDD5;
+}
+
+.whatsapp-message {
+    background: white;
+    padding: 15px;
+    border-radius: 0 10px 10px 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.whatsapp-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    border-width: 0 10px 10px 0;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+.whatsapp-message p {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+.whatsapp-message ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.whatsapp-message li {
+    color: #555;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.whatsapp-popup-footer {
+    padding: 15px 20px;
+    background: #F0F0F0;
+    border-radius: 0 0 15px 15px;
+}
+
+.whatsapp-chat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-chat-btn:hover {
+    background: #128C7E;
+    transform: scale(1.02);
+}
+
+.whatsapp-chat-btn i {
+    font-size: 20px;
+}
+
+@media (max-width: 480px) {
+    .whatsapp-popup {
+        width: calc(100vw - 50px);
+        right: -10px;
+    }
+}
+
+/* ==========================================
+   7. NEWSLETTER SIGNUP
+   ========================================== */
+.newsletter-section {
+    background: linear-gradient(135deg, #2D5016 0%, #3D6B1F 100%);
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+.newsletter-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-content h3 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.newsletter-content p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 25px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+}
+
+.newsletter-form button {
+    padding: 15px 30px;
+    background: #CCFF00;
+    color: #2D5016;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #b8e600;
+    transform: scale(1.05);
+}
+
+.newsletter-message {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.newsletter-message.success {
+    background: rgba(204, 255, 0, 0.2);
+    color: #CCFF00;
+}
+
+.newsletter-message.error {
+    background: rgba(255, 100, 100, 0.2);
+    color: #ff6b6b;
+}
+
+@media (max-width: 576px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   8. SCROLL TO TOP BUTTON
+   ========================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 170px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #CCFF00;
+    color: #2D5016;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9996;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: #b8e600;
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   9. ROI CALCULATOR STYLES
+   ========================================== */
+.roi-calculator {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.roi-calculator h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2D5016;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.calculator-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.input-group input,
+.input-group select {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #CCFF00;
+}
+
+.range-value {
+    text-align: right;
+    font-weight: 600;
+    color: #2D5016;
+}
+
+.calculator-results {
+    background: linear-gradient(135deg, #f8fff0, #f0f8e8);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(45, 80, 22, 0.1);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    color: #555;
+    font-size: 14px;
+}
+
+.result-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2D5016;
+}
+
+.result-highlight {
+    background: #CCFF00;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result-highlight .result-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.result-highlight .result-value {
+    font-size: 36px;
+    color: #2D5016;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #2D5016, #3D6B1F);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(45, 80, 22, 0.3);
+}
+
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .roi-calculator {
+        padding: 25px;
+    }
+}
+
+/* ==========================================
+   10. VIDEO TESTIMONIALS
+   ========================================== */
+.video-testimonials {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.video-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    padding: 20px;
+}
+
+.video-info h4 {
+    margin-bottom: 5px;
+    color: #2D5016;
+}
+
+.video-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ==========================================
+   11. ADDITIONAL UTILITY CLASSES
+   ========================================== */
+.text-gradient {
+    background: linear-gradient(135deg, #2D5016, #CCFF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Badge styles for new features */
+.badge-new {
+    display: inline-block;
+    background: #CCFF00;
+    color: #2D5016;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+/* ==========================================
+   12. RESPONSIVE ADJUSTMENTS
+   ========================================== */
+@media (max-width: 768px) {
+    .dark-mode-toggle,
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+    }
+    
+    .dark-mode-toggle {
+        bottom: 90px;
+    }
+    
+    .scroll-to-top {
+        bottom: 145px;
+    }
+    
+    .whatsapp-widget {
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    .whatsapp-btn {
+        width: 55px;
+        height: 55px;
+    }
+}
