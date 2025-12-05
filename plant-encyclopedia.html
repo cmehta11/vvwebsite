@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Vertvista's comprehensive plant encyclopedia. Find the perfect indoor plants for your office with detailed care guides, light requirements, and maintenance tips for Indian conditions.">
+    <meta name="keywords" content="office plants India, indoor plant guide, plant care tips, low light plants, air purifying plants, snake plant care, pothos care, office plant encyclopedia">
+    <title>Plant Encyclopedia - Indoor Plant Guide for Indian Offices | Vertvista</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    
+    <style>
+        /* Plant Encyclopedia Styles */
+        .encyclopedia-hero {
+            background: linear-gradient(135deg, #2D5016 0%, #1a3009 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .encyclopedia-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .encyclopedia-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Search and Filter */
+        .search-filter-section {
+            background: #fff;
+            padding: 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 30px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        .search-box input:focus {
+            border-color: #2D5016;
+        }
+        
+        .search-box button {
+            background: linear-gradient(135deg, #2D5016, #4a7c23);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .search-box button:hover {
+            transform: scale(1.05);
+        }
+        
+        .filter-tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tag {
+            background: #f0f0f0;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-tag:hover,
+        .filter-tag.active {
+            background: #2D5016;
+            color: #fff;
+        }
+        
+        /* Plant Grid */
+        .plants-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .plants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .plant-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .plant-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(45,80,22,0.15);
+        }
+        
+        .plant-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .plant-badges {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-light {
+            background: rgba(255,255,255,0.9);
+            color: #2D5016;
+        }
+        
+        .badge-air {
+            background: #4CAF50;
+            color: #fff;
+        }
+        
+        .badge-pet {
+            background: #FF6B35;
+            color: #fff;
+        }
+        
+        .plant-content {
+            padding: 25px;
+        }
+        
+        .plant-name {
+            font-size: 1.4rem;
+            color: #2D5016;
+            margin-bottom: 5px;
+        }
+        
+        .plant-scientific {
+            font-style: italic;
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .plant-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .plant-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-icon {
+            font-size: 1.2rem;
+            color: #2D5016;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+        
+        .stat-value {
+            font-size: 0.9rem;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        /* Plant Detail Modal */
+        .plant-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .plant-modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: #fff;
+            border-radius: 20px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .modal-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .modal-body {
+            padding: 40px;
+        }
+        
+        .modal-body h2 {
+            color: #2D5016;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .modal-body .scientific {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .care-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .care-item i {
+            font-size: 2rem;
+            color: #2D5016;
+            margin-bottom: 10px;
+        }
+        
+        .care-item h4 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .care-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Quick Guide Section */
+        .quick-guide {
+            background: #fff;
+            padding: 60px 0;
+        }
+        
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .guide-card {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9f5e8 100%);
+            border-radius: 16px;
+        }
+        
+        .guide-card i {
+            font-size: 3rem;
+            color: #2D5016;
+            margin-bottom: 15px;
+        }
+        
+        .guide-card h3 {
+            color: #2D5016;
+            margin-bottom: 10px;
+        }
+        
+        .guide-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .encyclopedia-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .plants-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Plants...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="https://www.genspark.ai/api/files/s/BzsM3pWD" alt="Vertvista" class="logo-img">
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="indoor-plants.html">Indoor Plants</a></li>
+                            <li><a href="maintenance.html">Maintenance Services</a></li>
+                            <li><a href="planters.html">Planters Collection</a></li>
+                            <li><a href="green-walls.html">Green Wall Systems</a></li>
+                            <li><a href="green-facade.html">Green Facade</a></li>
+                            <li><a href="moss-art.html">Moss Art</a></li>
+                            <li><a href="biophilic-design.html">Biophilic Design</a></li>
+                            <li><a href="landscape-design.html">Landscape Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="downloads.html">Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Locations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bangalore.html">Bangalore</a></li>
+                            <li><a href="pune.html">Pune</a></li>
+                            <li><a href="mumbai.html">Mumbai</a></li>
+                            <li><a href="chennai.html">Chennai</a></li>
+                            <li><a href="hyderabad.html">Hyderabad</a></li>
+                            <li><a href="gujarat.html">Gujarat</a></li>
+                            <li><a href="delhi-ncr.html">Delhi NCR</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="get-started.html" class="btn-primary btn-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="encyclopedia-hero">
+        <div class="container">
+            <h1 data-aos="fade-up"><i class="fas fa-leaf" style="margin-right: 15px;"></i>Plant Encyclopedia</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Discover the perfect plants for your office. Browse our comprehensive guide to indoor plants suited for Indian office environments.</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="search-filter-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="plantSearch" placeholder="Search plants by name, care level, or feature...">
+                <button onclick="searchPlants()"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="filter-tags">
+                <button class="filter-tag active" data-filter="all">All Plants</button>
+                <button class="filter-tag" data-filter="low-light">Low Light</button>
+                <button class="filter-tag" data-filter="air-purifying">Air Purifying</button>
+                <button class="filter-tag" data-filter="easy-care">Easy Care</button>
+                <button class="filter-tag" data-filter="pet-friendly">Pet Friendly</button>
+                <button class="filter-tag" data-filter="large">Large Plants</button>
+                <button class="filter-tag" data-filter="desk">Desk Plants</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plants Grid -->
+    <section class="plants-section">
+        <div class="container">
+            <div class="plants-grid" id="plantsGrid">
+                <!-- Snake Plant -->
+                <div class="plant-card" data-categories="low-light air-purifying easy-care" data-aos="fade-up">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1593482892540-90e6621e6950?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-light">Low Light</span>
+                            <span class="badge badge-air">Air Purifier</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">Snake Plant</h3>
+                        <p class="plant-scientific">Sansevieria trifasciata</p>
+                        <p class="plant-description">The ultimate low-maintenance office plant. Thrives in any light condition and purifies air by removing toxins including formaldehyde.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Low-High</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">2-3 weeks</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Very Easy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pothos -->
+                <div class="plant-card" data-categories="low-light air-purifying easy-care desk" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1602923668104-8f9e03e77e62?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-light">Easy Care</span>
+                            <span class="badge badge-air">Air Purifier</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">Golden Pothos</h3>
+                        <p class="plant-scientific">Epipremnum aureum</p>
+                        <p class="plant-description">A versatile trailing plant perfect for shelves and hanging baskets. Excellent air purifier that tolerates neglect remarkably well.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Low-Medium</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">1-2 weeks</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Very Easy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ZZ Plant -->
+                <div class="plant-card" data-categories="low-light easy-care desk" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-light">Low Light</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">ZZ Plant</h3>
+                        <p class="plant-scientific">Zamioculcas zamiifolia</p>
+                        <p class="plant-description">Virtually indestructible with glossy, architectural leaves. Perfect for windowless offices and areas with fluorescent lighting only.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Very Low</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">3-4 weeks</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Very Easy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Peace Lily -->
+                <div class="plant-card" data-categories="low-light air-purifying" data-aos="fade-up">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-air">NASA Approved</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">Peace Lily</h3>
+                        <p class="plant-scientific">Spathiphyllum</p>
+                        <p class="plant-description">Elegant flowering plant that excels at air purification. Removes benzene, formaldehyde, and other toxins while adding beauty to any space.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Low-Medium</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">Weekly</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Moderate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Areca Palm -->
+                <div class="plant-card" data-categories="air-purifying large pet-friendly" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1610173826608-74e4e9a6d930?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-light">Large</span>
+                            <span class="badge badge-pet">Pet Safe</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">Areca Palm</h3>
+                        <p class="plant-scientific">Dypsis lutescens</p>
+                        <p class="plant-description">The most popular indoor palm for offices. Creates a tropical ambiance while acting as a natural humidifier and air purifier.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Medium</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">Weekly</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Moderate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rubber Plant -->
+                <div class="plant-card" data-categories="air-purifying large easy-care" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-light">Statement Plant</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">Rubber Plant</h3>
+                        <p class="plant-scientific">Ficus elastica</p>
+                        <p class="plant-description">Bold, glossy leaves make this a stunning focal point. Excellent for large spaces like lobbies and conference rooms.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Medium</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">1-2 weeks</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Easy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spider Plant -->
+                <div class="plant-card" data-categories="air-purifying easy-care desk pet-friendly" data-aos="fade-up">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1572688484438-313a6e50c333?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-pet">Pet Safe</span>
+                            <span class="badge badge-air">Air Purifier</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">Spider Plant</h3>
+                        <p class="plant-scientific">Chlorophytum comosum</p>
+                        <p class="plant-description">Cheerful cascading plant that produces "babies" you can propagate. Safe for pets and excellent at removing indoor pollutants.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Low-Medium</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">Weekly</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Very Easy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dracaena -->
+                <div class="plant-card" data-categories="low-light air-purifying large" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1598880940371-c756e015faf1?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-light">Low Light</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">Dracaena</h3>
+                        <p class="plant-scientific">Dracaena marginata</p>
+                        <p class="plant-description">Striking architectural plant with sword-like leaves. Multiple varieties available to match any office aesthetic.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Low-Medium</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">2-3 weeks</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Easy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aglaonema -->
+                <div class="plant-card" data-categories="low-light easy-care desk" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plant-image" style="background-image: url('https://images.unsplash.com/photo-1620127807580-990c3ecebd14?w=600');">
+                        <div class="plant-badges">
+                            <span class="badge badge-light">Colorful</span>
+                        </div>
+                    </div>
+                    <div class="plant-content">
+                        <h3 class="plant-name">Chinese Evergreen</h3>
+                        <p class="plant-scientific">Aglaonema</p>
+                        <p class="plant-description">Available in stunning color variations from silver to red. Thrives in low light and air-conditioned environments typical of Indian offices.</p>
+                        <div class="plant-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-sun"></i></div>
+                                <div class="stat-label">Light</div>
+                                <div class="stat-value">Low</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-tint"></i></div>
+                                <div class="stat-label">Water</div>
+                                <div class="stat-value">1-2 weeks</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                <div class="stat-label">Care</div>
+                                <div class="stat-value">Easy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Guide -->
+    <section class="quick-guide">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 style="color: #2D5016; font-size: 2.5rem;">Quick Care Guide</h2>
+                <p style="color: #666; font-size: 1.1rem;">Essential tips for keeping your office plants healthy</p>
+            </div>
+            
+            <div class="guide-grid">
+                <div class="guide-card" data-aos="fade-up">
+                    <i class="fas fa-tint"></i>
+                    <h3>Watering</h3>
+                    <p>Check soil moisture before watering. Most office plants prefer to dry out slightly between waterings. Overwatering is the #1 killer!</p>
+                </div>
+                
+                <div class="guide-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-sun"></i>
+                    <h3>Lighting</h3>
+                    <p>Most plants listed here tolerate low office light. Rotate plants quarterly for even growth. Avoid placing directly under AC vents.</p>
+                </div>
+                
+                <div class="guide-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-thermometer-half"></i>
+                    <h3>Temperature</h3>
+                    <p>Office temperatures (20-26°C) are perfect for most tropical plants. Avoid sudden temperature changes and cold drafts.</p>
+                </div>
+                
+                <div class="guide-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Maintenance</h3>
+                    <p>Dust leaves monthly for better photosynthesis. Remove yellow leaves promptly. Consider our AMC for hassle-free care!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #2D5016 0%, #1a3009 100%); text-align: center; color: #fff;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;" data-aos="fade-up">Need Help Choosing Plants?</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px;" data-aos="fade-up" data-aos-delay="100">Our experts can recommend the perfect plants for your specific office environment</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+                <a href="get-started.html" style="background: #FF6B35; color: #fff; padding: 16px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-leaf"></i> Get Plant Recommendations
+                </a>
+                <a href="contact.html" style="background: transparent; color: #fff; padding: 16px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; border: 2px solid #fff; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-phone"></i> Talk to an Expert
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="https://www.genspark.ai/api/files/s/BzsM3pWD" alt="Vertvista Logo">
+                    </div>
+                    <p>India's trusted partner for workplace biophilia.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="indoor-plants.html">Indoor Plants</a></li>
+                        <li><a href="green-walls.html">Green Walls</a></li>
+                        <li><a href="maintenance.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +91-7045251178</li>
+                        <li><i class="fas fa-envelope"></i> info@vertvista.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vertvista Eco Solutions Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/enhancements.js"></script>
+    
+    <script>
+        // Filter functionality
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const plantCards = document.querySelectorAll('.plant-card');
+        
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                filterTags.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                
+                plantCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.dataset.categories;
+                        if (categories && categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Search functionality
+        function searchPlants() {
+            const searchTerm = document.getElementById('plantSearch').value.toLowerCase();
+            
+            plantCards.forEach(card => {
+                const name = card.querySelector('.plant-name').textContent.toLowerCase();
+                const scientific = card.querySelector('.plant-scientific').textContent.toLowerCase();
+                const description = card.querySelector('.plant-description').textContent.toLowerCase();
+                const categories = card.dataset.categories.toLowerCase();
+                
+                if (name.includes(searchTerm) || scientific.includes(searchTerm) || 
+                    description.includes(searchTerm) || categories.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Reset filter buttons
+            filterTags.forEach(t => t.classList.remove('active'));
+            filterTags[0].classList.add('active');
+        }
+        
+        // Search on Enter key
+        document.getElementById('plantSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchPlants();
+            }
+        });
+    </script>
+</body>
+</html>
