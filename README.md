@@ -14,28 +14,33 @@ This is the complete website for **Vertvista Eco Solutions Pvt. Ltd.**, a leadin
 
 **Completion Level:** 100% (Production-Ready)  
 **Last Updated:** December 5, 2025  
-**Total Pages:** 80+ HTML files  
-**Blog Articles:** 10 comprehensive posts  
+**Total Pages:** 45 HTML files  
+**Blog Articles:** 12 comprehensive posts  
 **Location Pages:** 7 city-specific pages  
+**Interactive Tools:** ROI Calculator  
 
 ### ✅ What's Complete:
 - [x] Homepage with hero section and service overview
 - [x] 8 detailed service pages (Indoor Plants, Maintenance, Green Walls, Moss Art, etc.)
 - [x] 7 location-specific pages with local SEO optimization
-- [x] 10 blog posts (~12,000 words of SEO content)
+- [x] 12 blog posts (~15,000+ words of SEO content)
 - [x] Complete schema.org structured data (40+ blocks)
 - [x] FAQ page with 18 Q&A pairs
-- [x] Testimonials page with 6 reviews
+- [x] Testimonials page with 12 reviews + Video Testimonials Section
 - [x] Case Studies page with 4 detailed projects
-- [x] Contact forms and Get Started CTAs throughout
+- [x] Contact forms with Formspree integration
 - [x] Responsive CSS design
-- [x] Updated sitemap.xml with 35+ URLs
+- [x] Updated sitemap.xml with 38+ URLs
 - [x] **Navigation updates on ALL pages** (completed Dec 5, 2025)
+- [x] **ROI Calculator** - Interactive biophilic investment calculator
+- [x] **Page Enhancements** - Scroll animations, dark mode, lightbox, WhatsApp widget
+- [x] **New Blog Posts** - Pet-friendly plants, Biophilic trends 2025
 
 ### 🔄 What's Pending:
-- [ ] Mobile responsiveness testing for new blog posts
+- [ ] Mobile responsiveness testing
 - [ ] Google Rich Results schema validation
 - [ ] Cross-browser compatibility testing
+- [ ] Live Formspree form ID configuration
 
 ---
 
@@ -78,7 +83,7 @@ This is the complete website for **Vertvista Eco Solutions Pvt. Ltd.**, a leadin
 - `gujarat.html` - Gujarat/Manufacturing focus
 - `delhi-ncr.html` - Delhi NCR/Corporate HQs focus
 
-### **Blog Posts (10 Articles):**
+### **Blog Posts (12 Articles):**
 1. `benefits-of-biophilic-design-workplace.html` - Science behind biophilia
 2. `best-indoor-plants-office-india.html` - 15 best plants for Indian offices
 3. `reduce-workplace-stress-with-plants.html` - Stress reduction evidence
@@ -90,12 +95,17 @@ This is the complete website for **Vertvista Eco Solutions Pvt. Ltd.**, a leadin
 9. `seasonal-plant-care-india-monsoon-summer.html` - Seasonal adjustments
 10. `small-space-biophilic-design-solutions.html` - Small office solutions
 11. `common-office-plant-care-mistakes-india.html` - Top 10 mistakes + fixes
+12. `pet-friendly-office-plants-india.html` - **NEW** Safe plants for pet-friendly offices
+13. `biophilic-design-trends-2025-india.html` - **NEW** 2025 trends and predictions
+
+### **Interactive Tools:**
+- `roi-calculator.html` - **NEW** Interactive ROI calculator for biophilic investments
 
 ### **Resource Pages:**
 - `faq.html` - 18 frequently asked questions (with FAQPage schema)
-- `testimonials.html` - 6 client reviews (with Review schemas)
+- `testimonials.html` - 12 client reviews + Video Testimonials Section (with Review schemas)
 - `case-studies.html` - 4 detailed project case studies (with Project schemas)
-- `gallery.html` - Photo gallery of projects
+- `gallery.html` - Photo gallery of projects (with lightbox)
 - `downloads.html` - Brochures and resources
 
 ### **Company Pages:**
@@ -139,8 +149,18 @@ This is the complete website for **Vertvista Eco Solutions Pvt. Ltd.**, a leadin
 - **CSS3** - Responsive design with Flexbox/Grid
 - **JavaScript** - Interactive elements, navigation, filtering
 - **Font Awesome 6.4.0** - Icons
-- **Google Fonts** - Typography (typically Inter, Roboto, or Open Sans)
+- **Google Fonts** - Typography (Poppins)
 - **Unsplash** - High-quality stock images
+
+### **Enhancement Features (js/enhancements.js & css/enhancements.css):**
+- **Page Loader** - Smooth loading animation
+- **Scroll Animations** - AOS-style reveal animations
+- **Image Lightbox** - Full-screen image gallery viewer
+- **Lazy Loading** - Optimized image loading for performance
+- **Dark Mode Toggle** - User preference for dark/light theme
+- **WhatsApp Widget** - Floating chat button for quick contact
+- **Newsletter Signup** - Email collection forms with validation
+- **Back to Top** - Smooth scroll to top button
 
 ### **SEO & Performance:**
 - **Schema.org JSON-LD** - Structured data for rich results
@@ -150,10 +170,11 @@ This is the complete website for **Vertvista Eco Solutions Pvt. Ltd.**, a leadin
 - **Internal linking** - 200+ cross-page links
 - **Image optimization** - Alt text, descriptive filenames
 
-### **No Backend Required:**
-- Static HTML site (can be hosted on any server)
-- Contact forms can integrate with services like Formspree, Netlify Forms, or Google Forms
-- No database needed (all content is static)
+### **Form Integration:**
+- **Formspree** - Contact form submissions (currently configured)
+- Form endpoint: `https://formspree.io/f/xwpkdpqe` (update with your own ID)
+- AJAX submission with success/error handling
+- No backend required - static HTML site
 
 ---
 
