@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Green Façade Systems by Vertvista - Exterior living walls and vertical gardens for sustainable building design. Transform building exteriors with lush, low-maintenance green facades.">
+    <title>Green Façade Systems - Vertvista Eco Solutions</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Green Façade Page Specific Styles */
+        .page-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--dark-green), var(--secondary-color));
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            font-size: 48px;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .page-hero p {
+            font-size: 20px;
+            color: var(--white);
+            opacity: 0.9;
+        }
+        
+        .intro-section {
+            padding: 80px 0;
+        }
+        
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .intro-content p.lead {
+            font-size: 22px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .benefits-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .benefit-card i {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .benefit-card p {
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+        
+        .applications-section {
+            padding: 80px 0;
+        }
+        
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .application-card {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .application-card i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .application-card h4 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .application-card p {
+            color: var(--text-color);
+            font-size: 15px;
+        }
+        
+        .gallery-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .project-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 300px;
+            background-color: var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 16px;
+        }
+        
+        .project-info {
+            padding: 25px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .project-info p {
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+        
+        .project-specs {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .project-specs span i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color), #A8D500);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 32px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Vertvista-Logo-Green.png" alt="Vertvista Logo" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="maintenance.html">Maintenance Services</a></li>
+                        <li><a href="planters.html">Planters Collection</a></li>
+                        <li><a href="green-walls.html">Green Wall Systems</a></li>
+                        <li><a href="green-facade.html">Green Façade</a></li>
+                        <li><a href="moss-art.html">Moss Art</a></li>
+                        <li><a href="biophilic-design.html">Biophilic Design</a></li>
+                        <li><a href="landscape-design.html">Landscape Design</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Resources</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link">Company</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="our-team.html">Our Team</a></li>
+                        <li><a href="innovations.html">Innovations</a></li>
+                        <li><a href="work-with-us.html">Work With Us</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="get-started.html" class="btn-primary-small">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Green Façade Systems</h1>
+            <p>Transform Building Exteriors with Living Vertical Gardens</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="lead">Green façades are vertical gardens designed for building exteriors, creating stunning living walls that enhance aesthetics while delivering significant environmental benefits.</p>
+                
+                <p>Our green façade systems combine cutting-edge engineering with horticultural expertise to deliver durable, low-maintenance exterior greenery that transforms urban landscapes. Ideal for commercial buildings, residential complexes, institutions, and public spaces.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Benefits of Green Façades</h2>
+                <p class="section-subtitle">Sustainable, beautiful, and functional</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-temperature-low"></i>
+                    <h3>Temperature Regulation</h3>
+                    <p>Reduce building surface temperatures by up to 10°C, lowering cooling costs and energy consumption.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-wind"></i>
+                    <h3>Air Quality Improvement</h3>
+                    <p>Filter pollutants, absorb CO₂, and produce oxygen, contributing to cleaner urban air.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Biodiversity Support</h3>
+                    <p>Create habitats for birds and insects, promoting urban biodiversity and ecological balance.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Visual Appeal</h3>
+                    <p>Transform bland building exteriors into stunning green landmarks that enhance property value.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-volume-mute"></i>
+                    <h3>Noise Reduction</h3>
+                    <p>Act as natural sound barriers, reducing external noise pollution for improved comfort.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Building Protection</h3>
+                    <p>Shield building facades from UV radiation, rain, and temperature fluctuations, extending structure life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal Applications -->
+    <section class="applications-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Ideal Applications</h2>
+                <p class="section-subtitle">Perfect for diverse building types</p>
+            </div>
+            
+            <div class="applications-grid">
+                <div class="application-card">
+                    <i class="fas fa-building"></i>
+                    <h4>Commercial Buildings</h4>
+                    <p>Corporate offices and business centers</p>
+                </div>
+                
+                <div class="application-card">
+                    <i class="fas fa-hotel"></i>
+                    <h4>Hotels & Resorts</h4>
+                    <p>Hospitality and leisure properties</p>
+                </div>
+                
+                <div class="application-card">
+                    <i class="fas fa-hospital"></i>
+                    <h4>Healthcare Facilities</h4>
+                    <p>Hospitals and wellness centers</p>
+                </div>
+                
+                <div class="application-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Educational Institutions</h4>
+                    <p>Schools, colleges, and universities</p>
+                </div>
+                
+                <div class="application-card">
+                    <i class="fas fa-home"></i>
+                    <h4>Residential Complexes</h4>
+                    <p>Apartments and housing societies</p>
+                </div>
+                
+                <div class="application-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h4>Retail Spaces</h4>
+                    <p>Malls and commercial centers</p>
+                </div>
+                
+                <div class="application-card">
+                    <i class="fas fa-landmark"></i>
+                    <h4>Public Buildings</h4>
+                    <p>Government and civic structures</p>
+                </div>
+                
+                <div class="application-card">
+                    <i class="fas fa-industry"></i>
+                    <h4>Industrial Facilities</h4>
+                    <p>Warehouses and factories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Our Green Façade Projects</h2>
+                <p class="section-subtitle">Transforming building exteriors across India</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 - Placeholder -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <p><i class="fas fa-image"></i> Project Image Coming Soon</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 1</h3>
+                        <p>Green façade installation details will be added here.</p>
+                        <div class="project-specs">
+                            <span><i class="fas fa-ruler-combined"></i> XXX sq ft</span>
+                            <span><i class="fas fa-map-marker-alt"></i> City</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - Placeholder -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <p><i class="fas fa-image"></i> Project Image Coming Soon</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 2</h3>
+                        <p>Green façade installation details will be added here.</p>
+                        <div class="project-specs">
+                            <span><i class="fas fa-ruler-combined"></i> XXX sq ft</span>
+                            <span><i class="fas fa-map-marker-alt"></i> City</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - Placeholder -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <p><i class="fas fa-image"></i> Project Image Coming Soon</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 3</h3>
+                        <p>Green façade installation details will be added here.</p>
+                        <div class="project-specs">
+                            <span><i class="fas fa-ruler-combined"></i> XXX sq ft</span>
+                            <span><i class="fas fa-map-marker-alt"></i> City</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Note: More project cards can be added when images are available -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: var(--text-light); font-style: italic;">More project images will be added soon. Contact us to learn more about our green façade installations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Building?</h2>
+            <p>Explore green façade solutions tailored to your needs</p>
+            <div class="hero-cta">
+                <a href="get-started.html" class="btn-primary btn-large" style="background-color: var(--secondary-color); color: var(--white);">Get Started</a>
+                <a href="get-started.html" class="btn-secondary btn-large" style="background-color: var(--white); color: var(--secondary-color);">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo">
+                            <img src="https://www.genspark.ai/api/files/s/axmxPgKM" alt="Vertvista - India's Trusted Biophilia & Greening Partner" class="logo-img">
+                        </a>
+                    </div>
+                    <p class="tagline">Breathe • Grow • Thrive</p>
+                    <p>India's most trusted biophilia & greening partner.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="maintenance.html">Maintenance Services</a></li>
+                        <li><a href="planters.html">Planters</a></li>
+                        <li><a href="#green-walls">Green Walls</a></li>
+                        <li><a href="green-facade.html">Green Façade</a></li>
+                        <li><a href="#moss-art">Moss Art</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> eco@vertvista.com</li>
+                        <li><i class="fas fa-globe"></i> www.vertvista.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India (HQ)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vertvista Eco Solutions Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

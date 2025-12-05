@@ -1,0 +1,288 @@
+{
+  "template_name": "Blog Post Article Template",
+  "template_version": "1.0",
+  "created_date": "2025-02-25",
+  "description": "Reusable template for creating new blog post pages with proper Article/BlogPosting schema, SEO optimization, and consistent structure.",
+  
+  "usage_instructions": [
+    "1. Choose one of the existing blog posts as a starting template",
+    "2. Copy the HTML structure and replace content sections",
+    "3. Update all schema.org metadata (headline, description, author, dates)",
+    "4. Write 1000-1500 word article with proper H2/H3 structure",
+    "5. Add relevant internal links to other blog posts and service pages",
+    "6. Update featured image URL and all image alt tags",
+    "7. Customize related posts section at bottom",
+    "8. Add to blog.html grid and update sitemap.xml"
+  ],
+  
+  "recommended_file_naming": {
+    "pattern": "[topic]-[subtopic]-[keywords].html",
+    "examples": [
+      "office-plant-care-tips-beginners.html",
+      "vertical-gardens-small-spaces.html",
+      "biophilic-design-healthcare-facilities.html",
+      "seasonal-plant-maintenance-india.html",
+      "indoor-air-quality-plants-study.html"
+    ],
+    "rules": [
+      "Use lowercase only",
+      "Separate words with hyphens",
+      "Keep under 60 characters",
+      "Include primary keyword",
+      "Descriptive and SEO-friendly"
+    ]
+  },
+  
+  "required_schema_fields": {
+    "BlogPosting": {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "[ARTICLE_TITLE]",
+      "description": "[META_DESCRIPTION - 150-160 chars]",
+      "image": "[FEATURED_IMAGE_URL]",
+      "author": {
+        "@type": "Person",
+        "name": "[AUTHOR_NAME]",
+        "jobTitle": "[AUTHOR_TITLE]",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Vertvista Eco Solutions Pvt. Ltd."
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vertvista Eco Solutions Pvt. Ltd.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.genspark.ai/api/files/s/BzsM3pWD"
+        }
+      },
+      "datePublished": "[YYYY-MM-DD]",
+      "dateModified": "[YYYY-MM-DD]",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.vertvista.com/[FILENAME].html"
+      },
+      "articleSection": "[CATEGORY]",
+      "wordCount": "[WORD_COUNT]",
+      "keywords": ["[KEYWORD1]", "[KEYWORD2]", "[KEYWORD3]"]
+    },
+    "BreadcrumbList": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vertvista.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.vertvista.com/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "[ARTICLE_TITLE]", "item": "https://www.vertvista.com/[FILENAME].html"}
+      ]
+    }
+  },
+  
+  "article_categories": [
+    {
+      "name": "Biophilic Design",
+      "topics": ["Workplace design", "Science & research", "Case studies", "Design principles", "ROI analysis"],
+      "filter_tag": "biophilic-design"
+    },
+    {
+      "name": "Plant Care",
+      "topics": ["Maintenance guides", "Plant selection", "Troubleshooting", "Seasonal care", "Species profiles"],
+      "filter_tag": "plant-care"
+    },
+    {
+      "name": "Workplace Wellness",
+      "topics": ["Stress reduction", "Productivity", "Air quality", "Mental health", "Employee satisfaction"],
+      "filter_tag": "workplace-wellness"
+    },
+    {
+      "name": "ROI & Business",
+      "topics": ["Cost-benefit analysis", "Payback periods", "Business cases", "Financial metrics", "Investment returns"],
+      "filter_tag": "roi"
+    },
+    {
+      "name": "Installation & Design",
+      "topics": ["Project planning", "Installation guides", "Design tips", "Space optimization", "Technical specs"],
+      "filter_tag": "installation"
+    }
+  ],
+  
+  "author_profiles": [
+    {
+      "name": "Priya Sharma",
+      "title": "Chief Biophilic Designer",
+      "expertise": ["Biophilic design", "Workplace design", "Sustainability", "Design principles"],
+      "bio": "Priya leads Vertvista's biophilic design practice with 12+ years experience. NID Ahmedabad graduate with WELL Building certification."
+    },
+    {
+      "name": "Rajesh Iyer",
+      "title": "Senior Horticulturist",
+      "expertise": ["Plant care", "Species selection", "Maintenance", "Indian climate plants"],
+      "bio": "Rajesh brings 15+ years expertise in tropical and subtropical horticulture, managing 200+ corporate installations."
+    },
+    {
+      "name": "Dr. Anjali Mehta",
+      "title": "Workplace Wellness Consultant",
+      "expertise": ["Organizational psychology", "Employee wellness", "Stress reduction", "Evidence-based interventions"],
+      "bio": "PhD in Organizational Psychology specializing in biophilic design impact on employee health and productivity."
+    },
+    {
+      "name": "Vikram Desai",
+      "title": "Landscape Architect",
+      "expertise": ["Landscape design", "Green walls", "Installation", "Technical planning"],
+      "bio": "Vikram has designed 150+ corporate green spaces including vertical gardens and traditional plantscaping."
+    },
+    {
+      "name": "Arjun Kapoor",
+      "title": "Business Development Director",
+      "expertise": ["ROI analysis", "Business cases", "Client consulting", "Financial modeling"],
+      "bio": "Arjun leads corporate partnerships and ROI analyses for 200+ clients, specializing in biophilia business cases."
+    }
+  ],
+  
+  "content_structure": {
+    "hero_section": {
+      "elements": ["Category badge", "H1 title (50-70 chars)", "Author name", "Date", "Read time"],
+      "background": "Relevant Unsplash image with gradient overlay"
+    },
+    "featured_image": {
+      "size": "1200x675px (16:9 ratio)",
+      "sources": ["Unsplash", "Pexels", "Client photos"],
+      "alt_text": "Descriptive alt text with keywords"
+    },
+    "introduction": {
+      "length": "2-3 paragraphs",
+      "elements": ["Hook/problem statement", "Article preview", "Key statistic or finding"],
+      "formatting": "Bold first sentence for emphasis"
+    },
+    "body_sections": {
+      "number": "4-6 major sections",
+      "h2_headings": "Descriptive, keyword-rich headings",
+      "h3_subheadings": "2-3 per major section",
+      "paragraphs": "3-5 sentences each, line-height 1.8",
+      "lists": "Use <ul> or <ol> for easy scanning",
+      "callouts": "Use .key-stat, .quote-box, or .case-box classes"
+    },
+    "visual_elements": [
+      "Stat boxes (3-4 key metrics)",
+      "Quote box (1-2 expert quotes)",
+      "Key stat callout (1-2 highlighted facts)",
+      "Case study box (1-2 real examples)",
+      "Comparison table (if relevant)"
+    ],
+    "conclusion": {
+      "length": "2-3 paragraphs",
+      "elements": ["Summary of key points", "Actionable takeaway", "Clear call-to-action"]
+    },
+    "author_bio": {
+      "elements": ["Avatar icon", "Name", "Title", "150-200 word bio"],
+      "styling": "Gray background, prominent placement"
+    },
+    "cta_section": {
+      "elements": ["Compelling headline", "Brief value proposition", "Primary CTA button"],
+      "styling": "Green gradient background, white text, centered"
+    },
+    "related_posts": {
+      "number": "3 related articles",
+      "elements": ["Article title", "Excerpt (1 sentence)", "Read More link"],
+      "selection": "Same category or complementary topics"
+    }
+  },
+  
+  "seo_optimization": {
+    "title_tag": {
+      "format": "[Primary Keyword] | [Secondary Keyword] | Vertvista",
+      "length": "50-60 characters",
+      "examples": [
+        "Best Office Plants India | Low Maintenance Guide | Vertvista",
+        "Green Walls vs Planters | Complete Comparison | Vertvista"
+      ]
+    },
+    "meta_description": {
+      "length": "150-160 characters",
+      "format": "Action + benefit + keywords + call-to-action",
+      "examples": [
+        "Discover the best low-maintenance office plants for Indian climates. Expert guide to air-purifying, climate-adapted plants for Mumbai, Bangalore, and more.",
+        "Complete cost, maintenance, and ROI comparison of green walls vs traditional planters for office spaces. Data-driven insights to choose the right solution."
+      ]
+    },
+    "keywords_meta": {
+      "primary": "1-2 main keywords (office plants India, green walls comparison)",
+      "secondary": "3-5 supporting keywords",
+      "long_tail": "2-3 specific phrases (best indoor plants office india)"
+    },
+    "internal_links": {
+      "minimum": "3-5 links to other blog posts or service pages",
+      "strategy": "Link to related blog posts, relevant service pages, location pages",
+      "anchor_text": "Descriptive, keyword-rich anchor text"
+    },
+    "external_links": {
+      "number": "2-4 links to authoritative sources",
+      "targets": "Research studies, NASA Clean Air Study, Harvard studies, etc.",
+      "attribute": "rel=\"nofollow\" for external links"
+    }
+  },
+  
+  "image_guidelines": {
+    "featured_image": {
+      "url_source": "https://images.unsplash.com/photo-[ID]?w=1200",
+      "alt_text": "[Primary keyword] in [context] - descriptive alt",
+      "loading": "Eager (it's above the fold)"
+    },
+    "inline_images": {
+      "frequency": "Every 300-400 words if relevant",
+      "alt_text": "Descriptive with keywords",
+      "loading": "Lazy loading for performance"
+    }
+  },
+  
+  "blog_grid_integration": {
+    "card_elements": [
+      "Featured image (600x400px)",
+      "Category badge",
+      "Date",
+      "Article title (H3)",
+      "Excerpt (1-2 sentences)",
+      "Author name",
+      "Read time (calculate: word count ÷ 200 words/min)"
+    ],
+    "data_attribute": "data-category=\"[CATEGORY_TAG]\" for filtering"
+  },
+  
+  "quality_checklist": [
+    "✅ Word count: 1000-1500 words minimum",
+    "✅ BlogPosting schema complete and validated",
+    "✅ BreadcrumbList schema included",
+    "✅ Title tag 50-60 characters with keywords",
+    "✅ Meta description 150-160 characters",
+    "✅ H1 → H2 → H3 hierarchy properly structured",
+    "✅ Featured image with descriptive alt text",
+    "✅ 3-5 internal links to other content",
+    "✅ 2-4 external links to authoritative sources",
+    "✅ Author bio section complete",
+    "✅ CTA section with clear call-to-action",
+    "✅ 3 related posts selected and linked",
+    "✅ Mobile-responsive styling tested",
+    "✅ Read time calculated and displayed",
+    "✅ Added to blog.html grid with correct category",
+    "✅ Added to sitemap.xml with priority 0.7",
+    "✅ Navigation includes Resources and Locations dropdowns",
+    "✅ Footer contact info standardized"
+  ],
+  
+  "future_blog_topic_ideas": [
+    "How to Choose Plants for Your Office: Complete Decision Framework",
+    "Indoor Air Quality: Which Plants Remove Which Toxins?",
+    "Seasonal Plant Care for Indian Climate: Month-by-Month Guide",
+    "Biophilic Design for Healthcare Facilities: Evidence & Best Practices",
+    "Small Space Solutions: Maximizing Greenery in Compact Offices",
+    "The Psychology of Color in Workplace Plants",
+    "Vertical Gardens for Apartments: DIY vs Professional Installation",
+    "Corporate Sustainability: How Plants Contribute to Green Certifications",
+    "Plant Selection for Different Light Conditions: Complete Chart",
+    "The Hidden Costs of DIY Office Plant Maintenance",
+    "Feng Shui and Biophilic Design: Where Science Meets Tradition",
+    "Pet-Friendly Office Plants: Safe Options for Dog-Friendly Workplaces",
+    "Water-Wise Landscaping for Indian Corporate Campuses",
+    "The Future of Workplace Design: Trends in Biophilia 2025-2030"
+  ]
+}

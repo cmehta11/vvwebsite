@@ -1,0 +1,904 @@
+/* ===================================
+   INNOVATIONS PAGE STYLES
+   =================================== */
+
+/* Hero Section */
+.innovations-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 600px;
+    background: linear-gradient(135deg, var(--dark-green) 0%, #1a2614 50%, #0f1a0a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.innovations-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(204, 255, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(204, 255, 0, 0.08) 0%, transparent 50%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(204, 255, 0, 0.15);
+    color: var(--primary-color);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+.innovations-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Innovation Categories */
+.innovation-categories {
+    padding: 100px 0;
+    background: var(--light-bg);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.pillar-card {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tech-pillar {
+    border-color: #4A90E2;
+}
+
+.tech-pillar:hover {
+    border-color: #4A90E2;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, var(--white) 100%);
+}
+
+.sustainability-pillar {
+    border-color: var(--primary-color);
+}
+
+.sustainability-pillar:hover {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(204, 255, 0, 0.05) 0%, var(--white) 100%);
+}
+
+.pillar-icon {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+.tech-pillar .pillar-icon {
+    color: #4A90E2;
+}
+
+.sustainability-pillar .pillar-icon {
+    color: var(--primary-color);
+}
+
+.pillar-card h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.pillar-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.pillar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pillar-tags span {
+    background: var(--light-bg);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Technology Innovations Section */
+.tech-innovations {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.innovation-feature {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.innovation-feature.reverse {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.innovation-feature.reverse .feature-visual {
+    order: 2;
+}
+
+.innovation-feature.reverse .feature-content {
+    order: 1;
+}
+
+.innovation-feature.featured {
+    background: linear-gradient(135deg, rgba(204, 255, 0, 0.05) 0%, var(--white) 50%);
+    padding: 60px;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+}
+
+.feature-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.feature-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.feature-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.feature-badge.tech {
+    background: rgba(74, 144, 226, 0.9);
+}
+
+.feature-badge.eco {
+    background: rgba(46, 184, 92, 0.9);
+}
+
+.feature-content .feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.feature-lead {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+.feature-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.detail-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.detail-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.detail-item p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.feature-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding-top: 30px;
+    border-top: 2px solid var(--light-bg);
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Tech Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.tech-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    border: 2px solid var(--light-bg);
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tech-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--secondary-color);
+}
+
+.tech-card > p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.tech-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.tech-features li i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Sustainability Section */
+.sustainability-section {
+    padding: 100px 0;
+    background: var(--light-bg);
+}
+
+.sustainability-feature {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 60px;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow-md);
+}
+
+.sustainability-feature.highlighted {
+    border: 3px solid var(--primary-color);
+}
+
+.carbon-calculator {
+    background: linear-gradient(135deg, var(--light-bg) 0%, #e8ffe8 100%);
+    padding: 40px;
+    border-radius: 16px;
+    margin: 30px 0;
+}
+
+.carbon-calculator h4 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.calculator-result {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.result-item {
+    flex: 1;
+    text-align: center;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.result-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.result-unit {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.result-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.result-equivalence {
+    flex: 1;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.result-equivalence strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.result-equivalence ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.result-equivalence li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    color: var(--text-color);
+}
+
+.result-equivalence i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.impact-stat {
+    text-align: center;
+    padding: 25px;
+    background: var(--light-bg);
+    border-radius: 12px;
+}
+
+.impact-stat .stat-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.impact-stat .stat-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.impact-stat .stat-period {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* Sustainability Grid */
+.sustainability-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.sustainability-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    border: 2px solid var(--light-bg);
+    transition: all 0.3s ease;
+}
+
+.sustainability-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.card-icon.water {
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+}
+
+.card-icon.waste {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.card-icon.local {
+    background: rgba(255, 152, 0, 0.1);
+    color: #FF9800;
+}
+
+.card-icon.materials {
+    background: rgba(139, 195, 74, 0.1);
+    color: #8BC34A;
+}
+
+.card-icon.biodiversity {
+    background: rgba(156, 39, 176, 0.1);
+    color: #9C27B0;
+}
+
+.card-icon.education {
+    background: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+}
+
+.sustainability-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--secondary-color);
+}
+
+.card-lead {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.card-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--light-bg);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.card-features li:last-child {
+    border-bottom: none;
+}
+
+.card-features li i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.card-features strong {
+    color: var(--secondary-color);
+}
+
+.card-metric {
+    text-align: center;
+    padding: 20px;
+    background: var(--light-bg);
+    border-radius: 10px;
+}
+
+.metric-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.metric-text {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Certifications Section */
+.certifications-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.cert-card {
+    background: var(--light-bg);
+    padding: 35px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.cert-card:hover {
+    background: var(--white);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.cert-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+.cert-card p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* CTA Section */
+.innovations-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--dark-green) 0%, #1a2614 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.innovations-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 30% 50%, rgba(204, 255, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(204, 255, 0, 0.08) 0%, transparent 50%);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.innovations-cta h2 {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.innovations-cta p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-large {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .innovation-feature {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .innovation-feature.reverse {
+        grid-template-columns: 1fr;
+    }
+    
+    .innovation-feature.reverse .feature-visual,
+    .innovation-feature.reverse .feature-content {
+        order: 0;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sustainability-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .certifications-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .innovations-hero {
+        height: auto;
+        min-height: 500px;
+        padding: 80px 0;
+    }
+    
+    .innovations-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .pillar-card {
+        padding: 35px;
+    }
+    
+    .innovation-feature.featured {
+        padding: 35px;
+    }
+    
+    .feature-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .feature-metrics {
+        grid-template-columns: 1fr;
+    }
+    
+    .sustainability-feature {
+        padding: 35px;
+    }
+    
+    .calculator-result {
+        flex-direction: column;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .sustainability-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .innovations-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-large {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .innovations-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .pillar-card {
+        padding: 25px;
+    }
+    
+    .feature-badge {
+        font-size: 0.75rem;
+        padding: 8px 15px;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,500 @@
+/* ================================================
+   DOWNLOADS/RESOURCES PAGE SPECIFIC STYLES
+   ================================================ */
+
+/* Resources Portal Card */
+.resources-portal-card {
+    background: linear-gradient(135deg, var(--primary-color), #A8D900);
+    padding: 50px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: var(--shadow-lg);
+}
+
+.portal-icon {
+    width: 120px;
+    height: 120px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.portal-content h2 {
+    font-size: 32px;
+    font-weight: var(--font-weight-bold);
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.portal-content p {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-large {
+    padding: 18px 36px;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.portal-note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+.portal-note i {
+    margin-right: 5px;
+}
+
+/* Resources Grid */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.resource-category {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.resource-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), #A8D900);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.resource-category h3 {
+    font-size: 22px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.resource-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.resource-list li:last-child {
+    border-bottom: none;
+}
+
+.resource-list li i {
+    color: var(--primary-color);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 4px;
+    transition: var(--transition);
+}
+
+.resource-link:hover {
+    color: var(--primary-color);
+    gap: 12px;
+}
+
+.resource-link i {
+    transition: var(--transition);
+}
+
+/* Featured Downloads */
+.featured-downloads {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    text-align: center;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.download-card.featured {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.download-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+}
+
+.download-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), #A8D900);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--secondary-color);
+    margin: 0 auto 20px;
+}
+
+.download-card h3 {
+    font-size: 20px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.download-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.download-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.download-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.download-meta i {
+    color: var(--primary-color);
+}
+
+.download-card .btn-primary,
+.download-card .btn-outline {
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-outline:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Custom Materials Box */
+.custom-materials-box {
+    background: linear-gradient(135deg, var(--dark-green), var(--secondary-color));
+    color: var(--white);
+    padding: 60px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.custom-icon {
+    width: 100px;
+    height: 100px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin: 0 auto 25px;
+}
+
+.custom-materials-box h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.custom-materials-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.custom-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.custom-feature i {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+/* Newsletter Box */
+.newsletter-box {
+    background: var(--light-bg);
+    padding: 50px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    font-size: 28px;
+    font-weight: var(--font-weight-bold);
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.newsletter-content p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.newsletter-form button {
+    white-space: nowrap;
+}
+
+.newsletter-note {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.newsletter-note i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .resources-portal-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+    
+    .portal-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+    
+    .portal-content h2 {
+        font-size: 28px;
+    }
+    
+    .portal-content p {
+        font-size: 16px;
+    }
+    
+    .resources-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .resources-portal-card {
+        padding: 30px 20px;
+    }
+    
+    .portal-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+    }
+    
+    .portal-content h2 {
+        font-size: 24px;
+    }
+    
+    .portal-content p {
+        font-size: 15px;
+    }
+    
+    .btn-large {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+    
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .resource-category {
+        padding: 25px;
+    }
+    
+    .featured-downloads {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .download-card {
+        padding: 25px;
+    }
+    
+    .custom-materials-box {
+        padding: 40px 25px;
+    }
+    
+    .custom-materials-box h2 {
+        font-size: 24px;
+    }
+    
+    .custom-materials-box p {
+        font-size: 16px;
+    }
+    
+    .custom-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .newsletter-box {
+        padding: 30px 20px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .portal-content h2 {
+        font-size: 20px;
+    }
+    
+    .download-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .custom-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,197 @@
+{
+  "template_name": "City Location Page Template",
+  "template_version": "1.0",
+  "created_date": "2025-02-25",
+  "description": "Reusable template for creating new city location pages (Chennai, Hyderabad, Gujarat, Delhi NCR). Copy bangalore.html and replace placeholders with city-specific information.",
+  
+  "usage_instructions": [
+    "1. Copy bangalore.html to [CITY_NAME_LOWERCASE].html",
+    "2. Find and replace all placeholders with city-specific data",
+    "3. Update coordinates using Google Maps",
+    "4. Customize areas served (6 neighborhoods/business districts)",
+    "5. Update local services based on city strengths",
+    "6. Adjust team size, client count, and establishment year",
+    "7. Add city-specific client logos if available"
+  ],
+  
+  "placeholders_to_replace": {
+    "[CITY_NAME]": {
+      "description": "Full city name in title case",
+      "examples": ["Chennai", "Hyderabad", "Gujarat", "Delhi NCR"]
+    },
+    "[CITY_NAME_LOWERCASE]": {
+      "description": "City name in lowercase for file names and IDs",
+      "examples": ["chennai", "hyderabad", "gujarat", "delhi-ncr"]
+    },
+    "[STATE_NAME]": {
+      "description": "State/region name",
+      "examples": ["Tamil Nadu", "Telangana", "Gujarat", "Delhi"]
+    },
+    "[LATITUDE]": {
+      "description": "Geographic latitude coordinate",
+      "examples": ["13.0827", "17.3850", "23.0225", "28.7041"],
+      "how_to_find": "Google '[CITY_NAME] coordinates' or use Google Maps"
+    },
+    "[LONGITUDE]": {
+      "description": "Geographic longitude coordinate",
+      "examples": ["80.2707", "78.4867", "72.5714", "77.1025"]
+    },
+    "[POSTAL_CODE]": {
+      "description": "Primary postal code for the city",
+      "examples": ["600001", "500001", "380001", "110001"]
+    },
+    "[ESTABLISHED_YEAR]": {
+      "description": "Year Vertvista operations began in this city",
+      "examples": ["2018", "2019", "2020", "2024"]
+    },
+    "[CLIENT_COUNT]": {
+      "description": "Number of active clients in the city",
+      "examples": ["150+", "180+", "120+", "80+"]
+    },
+    "[TEAM_SIZE]": {
+      "description": "Number of team members in city operations",
+      "examples": ["10", "15", "8", "12"]
+    },
+    "[AREA1]": {
+      "description": "First major business district/neighborhood",
+      "examples": ["T. Nagar & Anna Nagar", "Gachibowli & HITEC City", "Ahmedabad Business District", "Connaught Place & CP"]
+    },
+    "[AREA2]": {
+      "description": "Second major area",
+      "examples": ["OMR IT Corridor", "Banjara Hills & Jubilee Hills", "Gandhinagar", "Gurgaon Cyber City"]
+    },
+    "[AREA3]": {
+      "description": "Third major area",
+      "examples": ["Guindy & Nandanam", "Financial District", "SG Highway", "Noida & Greater Noida"]
+    },
+    "[AREA4]": {
+      "description": "Fourth major area",
+      "examples": ["Adyar & Besant Nagar", "Kukatpally & KPHB", "Satellite & Vastrapur", "Aerocity & Mahipalpur"]
+    },
+    "[AREA5]": {
+      "description": "Fifth major area",
+      "examples": ["Porur & Vadapalani", "Madhapur", "Prahlad Nagar", "Nehru Place"]
+    },
+    "[AREA6]": {
+      "description": "Sixth major area",
+      "examples": ["Velachery & Tambaram", "Secunderabad", "Bodakdev", "Dwarka"]
+    },
+    "[CITY_FOCUS]": {
+      "description": "Primary industry/sector focus for the city",
+      "examples": ["Manufacturing & Automotive Hub", "IT & Pharmaceutical Center", "Industrial & Trade Hub", "Government & Corporate Capital"]
+    },
+    "[CLIENT1]": {
+      "description": "First major local client",
+      "examples": ["Tata Motors", "Amazon Hyderabad", "Adani Group", "Infosys"]
+    },
+    "[CLIENT2]": {
+      "description": "Second major local client",
+      "examples": ["Ford India", "Google Hyderabad", "Torrent Pharma", "HCL Technologies"]
+    },
+    "[CLIENT3]": {
+      "description": "Third major local client",
+      "examples": ["Cognizant", "Microsoft", "Zydus Cadila", "Deloitte"]
+    }
+  },
+  
+  "local_business_schema_fields": {
+    "name": "Vertvista Eco Solutions - [CITY_NAME]",
+    "telephone": "+91-7045251178",
+    "email": "info@vertvista.com",
+    "address": {
+      "streetAddress": "[OPERATION_CENTER_NAME]",
+      "addressLocality": "[CITY_NAME]",
+      "addressRegion": "[STATE_NAME]",
+      "postalCode": "[POSTAL_CODE]",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "latitude": "[LATITUDE]",
+      "longitude": "[LONGITUDE]"
+    },
+    "openingHours": "Monday-Saturday 09:00-19:00"
+  },
+  
+  "recommended_services": [
+    "Indoor Plants & Maintenance",
+    "Green Wall Systems",
+    "Moss Art Installations",
+    "Landscape Design & Build",
+    "Biophilic Design Consultation",
+    "Custom Planters & Accessories"
+  ],
+  
+  "seo_keywords": {
+    "primary": "office plants [CITY_NAME], green walls [CITY_NAME], biophilic design [CITY_NAME]",
+    "secondary": "indoor plants [CITY_NAME], plant maintenance [CITY_NAME], vertical gardens [CITY_NAME]",
+    "local": "workspace greening [CITY_NAME], corporate landscaping [CITY_NAME]"
+  },
+  
+  "content_sections": [
+    {
+      "section": "Hero",
+      "required_elements": ["City name", "Badge (Est. year)", "Badge (Client count)", "Badge (Team size)", "CTA buttons"]
+    },
+    {
+      "section": "Areas Served",
+      "required_elements": ["6 major business districts/neighborhoods", "Brief description of each", "Icons for each area"]
+    },
+    {
+      "section": "Local Services",
+      "required_elements": ["6 service offerings", "City-specific descriptions", "Service icons"]
+    },
+    {
+      "section": "Client Showcase",
+      "required_elements": ["3-4 major local clients", "Brief descriptions", "Logos if available"]
+    },
+    {
+      "section": "Contact Form",
+      "required_elements": ["Name, Email, Phone, Message fields", "City-specific contact details"]
+    }
+  ],
+  
+  "future_cities": [
+    {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "coordinates": "13.0827, 80.2707",
+      "focus": "Manufacturing & IT Hub",
+      "key_areas": ["T. Nagar", "OMR IT Corridor", "Guindy", "Adyar", "Porur", "Velachery"]
+    },
+    {
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "coordinates": "17.3850, 78.4867",
+      "focus": "IT & Pharmaceutical Center",
+      "key_areas": ["Gachibowli", "HITEC City", "Banjara Hills", "Financial District", "Madhapur", "Secunderabad"]
+    },
+    {
+      "city": "Gujarat (Ahmedabad)",
+      "state": "Gujarat",
+      "coordinates": "23.0225, 72.5714",
+      "focus": "Industrial & Trade Hub",
+      "key_areas": ["Business District", "Gandhinagar", "SG Highway", "Satellite", "Prahlad Nagar", "Bodakdev"]
+    },
+    {
+      "city": "Delhi NCR",
+      "state": "Delhi",
+      "coordinates": "28.7041, 77.1025",
+      "focus": "Government & Corporate Capital",
+      "key_areas": ["Connaught Place", "Gurgaon Cyber City", "Noida", "Aerocity", "Nehru Place", "Dwarka"]
+    }
+  ],
+  
+  "quality_checklist": [
+    "✅ All [PLACEHOLDER] values replaced with actual data",
+    "✅ Coordinates verified via Google Maps",
+    "✅ Schema.org LocalBusiness structure complete",
+    "✅ BreadcrumbList schema included",
+    "✅ All 6 areas served populated with real locations",
+    "✅ Client names and logos updated",
+    "✅ Meta description includes city name and keywords",
+    "✅ Navigation includes Resources and Locations dropdowns",
+    "✅ Footer contact info updated (standard: +91-7045251178, info@vertvista.com)",
+    "✅ Images updated if city-specific photos available",
+    "✅ File added to sitemap.xml with priority 0.9"
+  ]
+}

@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Need a landscape design company for your corporate office or property in India? Vertvista offers complete landscape architecture services with in-house design team. We handle site planning, drainage, irrigation systems, plant selection, hardscape design, and lighting for offices, campuses, residential complexes across Mumbai, Bangalore, Pune, Chennai & more.">
+    <meta name="keywords" content="landscape design India, corporate landscaping, landscape architecture Mumbai, outdoor landscape design, garden design Bangalore, landscape design and build, commercial landscaping India, Vertvista landscape">
+    <title>Landscape Design & Build Services | Corporate & Outdoor | Vertvista India</title>
+    
+    <!-- Structured Data for AI/LLM Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Landscape Design and Build",
+      "name": "Complete Landscape Architecture Services",
+      "description": "Full-service landscape design and build with in-house architects handling site planning, drainage engineering, irrigation systems, plant selection, hardscape design, and lighting for corporate campuses, commercial properties, residential complexes, and institutions across India",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Vertvista Eco Solutions Pvt. Ltd.",
+        "telephone": "+91-7045251178",
+        "email": "info@vertvista.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mumbai",
+          "addressCountry": "IN"
+        },
+        "areaServed": ["Mumbai", "Pune", "Bangalore", "Chennai", "Hyderabad", "Gujarat"]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Landscape Services",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "name": "Master Planning & Concept Design",
+            "description": "Site analysis, conceptual layouts, 3D visualizations, and material selections"
+          },
+          {
+            "@type": "Service",
+            "name": "Engineering & Infrastructure",
+            "description": "Drainage systems, irrigation design, soil improvement, and structural integration"
+          },
+          {
+            "@type": "Service",
+            "name": "Installation & Execution",
+            "description": "Complete build-out with project management, quality control, and timeline adherence"
+          },
+          {
+            "@type": "Service",
+            "name": "Maintenance & Care",
+            "description": "Ongoing landscape maintenance with AMC contracts and seasonal care"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "200"
+      }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.vertvista.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.vertvista.com/#services"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Landscape Design",
+        "item": "https://www.vertvista.com/landscape-design.html"
+      }]
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #1e4620 0%, #3a7a3f 50%, #5da961 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="%23ffffff" d="M0,100 C320,150 480,120 720,100 C960,80 1120,110 1440,100 L1440,150 L0,150 Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .page-hero h1 {
+            font-size: 52px;
+            color: var(--white);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-hero p {
+            font-size: 22px;
+            color: var(--white);
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .intro-section {
+            padding: 80px 0;
+        }
+        
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .intro-content p.lead {
+            font-size: 24px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .intro-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+        
+        .why-landscape {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f8f9fa, #e9ecef);
+        }
+        
+        .benefits-grid-landscape {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card-landscape {
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .benefit-card-landscape:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .benefit-number {
+            font-size: 56px;
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-label {
+            font-size: 16px;
+            font-weight: var(--font-weight-semibold);
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .benefit-description {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+        }
+        
+        .team-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+        
+        .team-intro p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .team-card {
+            background: linear-gradient(180deg, #ffffff, #f8f9fa);
+            padding: 40px 35px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .team-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), #A8D500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 36px;
+            color: var(--secondary-color);
+        }
+        
+        .team-card h3 {
+            color: var(--secondary-color);
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .team-card p {
+            color: var(--text-color);
+            line-height: 1.7;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        .services-landscape {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .services-grid-landscape {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+        
+        .service-card-landscape {
+            background-color: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .service-card-landscape:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-header-landscape {
+            background: linear-gradient(135deg, var(--primary-color), #A8D500);
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .service-header-landscape i {
+            font-size: 50px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .service-header-landscape h3 {
+            color: var(--secondary-color);
+            font-size: 22px;
+            margin: 0;
+        }
+        
+        .service-body-landscape {
+            padding: 30px;
+        }
+        
+        .service-body-landscape p {
+            color: var(--text-color);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .service-body-landscape ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-body-landscape ul li {
+            padding: 8px 0;
+            color: var(--text-color);
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            font-size: 15px;
+        }
+        
+        .service-body-landscape ul li i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+        
+        .process-landscape {
+            padding: 80px 0;
+        }
+        
+        .process-timeline-landscape {
+            position: relative;
+            max-width: 1000px;
+            margin: 50px auto 0;
+        }
+        
+        .process-step-landscape {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+        
+        .process-step-landscape:nth-child(even) .process-content-left {
+            order: 3;
+        }
+        
+        .process-step-landscape:nth-child(even) .process-content-right {
+            order: 1;
+        }
+        
+        .process-content-left,
+        .process-content-right {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .process-content-left h3,
+        .process-content-right h3 {
+            color: var(--secondary-color);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .process-content-left p,
+        .process-content-right p {
+            color: var(--text-color);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        
+        .process-icon-landscape {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), #A8D500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: var(--font-weight-bold);
+            color: var(--secondary-color);
+            box-shadow: 0 4px 15px rgba(204, 255, 0, 0.4);
+            z-index: 2;
+        }
+        
+        .gallery-landscape {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .projects-grid-landscape {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .project-card-landscape {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+        
+        .project-card-landscape:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .project-image-landscape {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .project-image-landscape img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card-landscape:hover .project-image-landscape img {
+            transform: scale(1.1);
+        }
+        
+        .project-info-landscape {
+            padding: 25px;
+            background-color: var(--white);
+        }
+        
+        .project-info-landscape h3 {
+            color: var(--secondary-color);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .project-info-landscape p {
+            color: var(--text-color);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color), #A8D500);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 35px;
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 36px;
+            }
+            
+            .benefits-grid-landscape {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .team-grid,
+            .projects-grid-landscape {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step-landscape {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step-landscape:nth-child(even) .process-content-left,
+            .process-step-landscape:nth-child(even) .process-content-right {
+                order: initial;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="https://www.genspark.ai/api/files/s/BzsM3pWD" alt="Vertvista - India's Trusted Biophilia & Greening Partner" class="logo-img">
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="indoor-plants.html">Indoor Plants</a></li>
+                            <li><a href="maintenance.html">Maintenance Services</a></li>
+                            <li><a href="planters.html">Planters Collection</a></li>
+                            <li><a href="green-walls.html">Green Wall Systems</a></li>
+                            <li><a href="green-facade.html">Green Façade</a></li>
+                            <li><a href="moss-art.html">Moss Art</a></li>
+                            <li><a href="biophilic-design.html">Biophilic Design</a></li>
+                            <li><a href="landscape-design.html">Landscape Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="downloads.html">Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Locations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bangalore.html">Bangalore</a></li>
+                            <li><a href="pune.html">Pune</a></li>
+                            <li><a href="mumbai.html">Mumbai</a></li>
+                            <li><a href="chennai.html">Chennai</a></li>
+                            <li><a href="hyderabad.html">Hyderabad</a></li>
+                            <li><a href="gujarat.html">Gujarat</a></li>
+                            <li><a href="delhi-ncr.html">Delhi NCR</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="get-started.html" class="btn-primary btn-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Landscape Design & Build</h1>
+            <p>Comprehensive Landscape Architecture | From Vision to Execution with In-House Experts</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <p class="lead">Transform outdoor environments into functional, sustainable spaces that enhance corporate image, employee wellbeing, and environmental performance.</p>
+                
+                <p>At Vertvista, we offer complete landscape design and build services led by our in-house team of landscape architects, horticulturists, and project managers. From initial concept to final execution, we handle every aspect of landscape development—site planning, drainage engineering, irrigation systems, plant selection, hardscape design, lighting, and ongoing maintenance.</p>
+                
+                <p>Whether you're developing a corporate campus, commercial property, residential complex, or institutional facility, our comprehensive approach delivers multi-dimensional benefits that generic landscaping solutions cannot match. We create spaces that optimize resources, reduce long-term maintenance costs, and provide lasting value.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Landscape Design -->
+    <section class="why-landscape">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Why Professional Landscape Design?</h2>
+                <p class="section-subtitle">Transform environments, enhance wellbeing, add lasting value</p>
+            </div>
+            
+            <div class="benefits-grid-landscape">
+                <div class="benefit-card-landscape">
+                    <div class="benefit-number">15%</div>
+                    <div class="benefit-label">Property Value Increase</div>
+                    <p class="benefit-description">Professional landscaping measurably increases property values and leasing appeal</p>
+                </div>
+                
+                <div class="benefit-card-landscape">
+                    <div class="benefit-number">40%</div>
+                    <div class="benefit-label">Employee Satisfaction</div>
+                    <p class="benefit-description">Access to green outdoor spaces dramatically improves workplace satisfaction</p>
+                </div>
+                
+                <div class="benefit-card-landscape">
+                    <div class="benefit-number">5°C</div>
+                    <div class="benefit-label">Temperature Reduction</div>
+                    <p class="benefit-description">Strategic landscaping reduces ambient temperatures through natural cooling</p>
+                </div>
+                
+                <div class="benefit-card-landscape">
+                    <div class="benefit-number">60%</div>
+                    <div class="benefit-label">Stormwater Management</div>
+                    <p class="benefit-description">Properly designed landscapes manage runoff and reduce drainage issues</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- In-House Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">In-House Architects & Experts</h2>
+                <p class="section-subtitle">Multidisciplinary team for comprehensive solutions</p>
+            </div>
+            
+            <div class="team-intro">
+                <p>Our in-house professionals blend expertise across landscape architecture, horticulture, and project management to deliver exceptional green spaces. Each team member brings specialized knowledge to transform your vision into reality.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Landscape Architects</h3>
+                    <p>Qualified professionals with expertise in site planning, sustainable design, and spatial organization for urban and corporate environments. We translate your vision into buildable, functional designs.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Horticulturists & Plant Specialists</h3>
+                    <p>Expert plant knowledge ensuring appropriate species selection, plant health, and long-term growth strategies for every climate, soil condition, and maintenance level.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Project Managers & Installation Teams</h3>
+                    <p>Experienced project coordinators and skilled installation crews ensuring on-time, on-budget delivery with minimal disruption to your operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="services-landscape">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Comprehensive Landscape Services</h2>
+                <p class="section-subtitle">End-to-end solutions from concept to maintenance</p>
+            </div>
+            
+            <div class="services-grid-landscape">
+                <div class="service-card-landscape">
+                    <div class="service-header-landscape">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h3>Master Planning & Design</h3>
+                    </div>
+                    <div class="service-body-landscape">
+                        <p>Complete landscape architecture services from concept development to construction documentation.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>Site analysis and assessment</span></li>
+                            <li><i class="fas fa-check"></i> <span>Conceptual design and 3D visualization</span></li>
+                            <li><i class="fas fa-check"></i> <span>Master plan development</span></li>
+                            <li><i class="fas fa-check"></i> <span>Construction drawings and specifications</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card-landscape">
+                    <div class="service-header-landscape">
+                        <i class="fas fa-water"></i>
+                        <h3>Drainage & Irrigation Engineering</h3>
+                    </div>
+                    <div class="service-body-landscape">
+                        <p>Expert water management systems ensuring efficient irrigation and proper drainage.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>Automated irrigation system design</span></li>
+                            <li><i class="fas fa-check"></i> <span>Drip irrigation for water conservation</span></li>
+                            <li><i class="fas fa-check"></i> <span>Surface and subsurface drainage</span></li>
+                            <li><i class="fas fa-check"></i> <span>Rainwater harvesting integration</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card-landscape">
+                    <div class="service-header-landscape">
+                        <i class="fas fa-tree"></i>
+                        <h3>Plant Selection & Sourcing</h3>
+                    </div>
+                    <div class="service-body-landscape">
+                        <p>Curated plant palettes optimized for local climate, soil, and maintenance requirements.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>Indigenous and adaptive species</span></li>
+                            <li><i class="fas fa-check"></i> <span>Low-maintenance plant selections</span></li>
+                            <li><i class="fas fa-check"></i> <span>Seasonal color and texture planning</span></li>
+                            <li><i class="fas fa-check"></i> <span>Direct nursery sourcing</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card-landscape">
+                    <div class="service-header-landscape">
+                        <i class="fas fa-cubes"></i>
+                        <h3>Hardscape Design</h3>
+                    </div>
+                    <div class="service-body-landscape">
+                        <p>Paving, pathways, seating, and structural elements integrated with softscape.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>Walkways and pathways</span></li>
+                            <li><i class="fas fa-check"></i> <span>Patios and plaza areas</span></li>
+                            <li><i class="fas fa-check"></i> <span>Retaining walls and edging</span></li>
+                            <li><i class="fas fa-check"></i> <span>Outdoor furniture and seating</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card-landscape">
+                    <div class="service-header-landscape">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Landscape Lighting</h3>
+                    </div>
+                    <div class="service-body-landscape">
+                        <p>Strategic lighting design enhancing safety, aesthetics, and nighttime usability.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>Pathway and safety lighting</span></li>
+                            <li><i class="fas fa-check"></i> <span>Accent and uplighting</span></li>
+                            <li><i class="fas fa-check"></i> <span>Energy-efficient LED systems</span></li>
+                            <li><i class="fas fa-check"></i> <span>Automated controls and timers</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card-landscape">
+                    <div class="service-header-landscape">
+                        <i class="fas fa-tools"></i>
+                        <h3>Installation & Execution</h3>
+                    </div>
+                    <div class="service-body-landscape">
+                        <p>Professional turnkey installation with minimal disruption and comprehensive project management.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>Site preparation and grading</span></li>
+                            <li><i class="fas fa-check"></i> <span>Soil amendment and preparation</span></li>
+                            <li><i class="fas fa-check"></i> <span>Plant installation and establishment</span></li>
+                            <li><i class="fas fa-check"></i> <span>Quality assurance and handover</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-landscape">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Our Design-Build Process</h2>
+                <p class="section-subtitle">Seamless journey from concept to completion</p>
+            </div>
+            
+            <div class="process-timeline-landscape">
+                <div class="process-step-landscape">
+                    <div class="process-content-left">
+                        <h3>Site Analysis & Client Consultation</h3>
+                        <p>Comprehensive site assessment including topography, soil testing, drainage patterns, sun exposure, and existing conditions. We discuss your vision, functional requirements, budget, and timeline expectations.</p>
+                    </div>
+                    <div class="process-icon-landscape">1</div>
+                    <div class="process-content-right"></div>
+                </div>
+                
+                <div class="process-step-landscape">
+                    <div class="process-content-left"></div>
+                    <div class="process-icon-landscape">2</div>
+                    <div class="process-content-right">
+                        <h3>Concept Development & Visualization</h3>
+                        <p>Our architects create preliminary design concepts with 3D renderings showing how the final landscape will look. We present multiple options with plant palettes, hardscape materials, and spatial layouts.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step-landscape">
+                    <div class="process-content-left">
+                        <h3>Design Refinement & Approvals</h3>
+                        <p>Based on your feedback, we refine the design and develop detailed construction drawings including planting plans, irrigation layouts, drainage schemes, and lighting designs. All necessary approvals obtained.</p>
+                    </div>
+                    <div class="process-icon-landscape">3</div>
+                    <div class="process-content-right"></div>
+                </div>
+                
+                <div class="process-step-landscape">
+                    <div class="process-content-left"></div>
+                    <div class="process-icon-landscape">4</div>
+                    <div class="process-content-right">
+                        <h3>Procurement & Scheduling</h3>
+                        <p>We procure all materials, plants, and equipment while coordinating installation schedules to minimize disruption. Dedicated project manager keeps you informed throughout.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step-landscape">
+                    <div class="process-content-left">
+                        <h3>Professional Installation</h3>
+                        <p>Our experienced installation crews execute the design with precision. From soil preparation and hardscape construction to plant installation and system testing—everything handled professionally.</p>
+                    </div>
+                    <div class="process-icon-landscape">5</div>
+                    <div class="process-content-right"></div>
+                </div>
+                
+                <div class="process-step-landscape">
+                    <div class="process-content-left"></div>
+                    <div class="process-icon-landscape">6</div>
+                    <div class="process-content-right">
+                        <h3>Establishment & Maintenance</h3>
+                        <p>Initial establishment period with intensive care ensures successful plant growth. Transition to regular maintenance schedule with transparent AMC contracts for long-term landscape health.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-landscape">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Our Landscape Projects</h2>
+                <p class="section-subtitle">Transforming outdoor spaces across India</p>
+            </div>
+            
+            <div class="projects-grid-landscape">
+                <div class="project-card-landscape">
+                    <div class="project-image-landscape">
+                        <img src="https://www.genspark.ai/api/files/s/69.jpg" alt="Coastal landscape with gardens" loading="lazy">
+                    </div>
+                    <div class="project-info-landscape">
+                        <h3>Coastal Property Landscape</h3>
+                        <p>Complete landscape development with tropical gardens, palm trees, and coastal-adaptive plant selections.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card-landscape">
+                    <div class="project-image-landscape">
+                        <img src="https://www.genspark.ai/api/files/s/84.jpg" alt="Modern garden with curved fence" loading="lazy">
+                    </div>
+                    <div class="project-info-landscape">
+                        <h3>Contemporary Garden Design</h3>
+                        <p>Modern landscape featuring curved architectural elements, organized plant displays, and sustainable design principles.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card-landscape">
+                    <div class="project-image-landscape">
+                        <img src="https://www.genspark.ai/api/files/s/88.jpg" alt="Rooftop garden plaza" loading="lazy">
+                    </div>
+                    <div class="project-info-landscape">
+                        <h3>Rooftop Plaza Garden</h3>
+                        <p>Landscaped outdoor plaza with flowering shrubs, trees, and organized planting beds creating vibrant outdoor amenity space.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card-landscape">
+                    <div class="project-image-landscape">
+                        <img src="https://www.genspark.ai/api/files/s/101.jpg" alt="Tropical garden with lawn" loading="lazy">
+                    </div>
+                    <div class="project-info-landscape">
+                        <h3>Tropical Garden Landscape</h3>
+                        <p>Lush tropical garden featuring diverse plant species, manicured lawn, and contrasting stone pathways.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card-landscape">
+                    <div class="project-image-landscape">
+                        <img src="https://www.genspark.ai/api/files/s/182.jpg" alt="Modern outdoor garden overlooking ocean" loading="lazy">
+                    </div>
+                    <div class="project-info-landscape">
+                        <h3>Modern Outdoor Garden</h3>
+                        <p>Contemporary landscape design with ocean views, featuring lush grass areas and strategic plant placement.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card-landscape">
+                    <div class="project-image-landscape">
+                        <img src="https://www.genspark.ai/api/files/s/200.jpg" alt="Well-maintained diverse garden" loading="lazy">
+                    </div>
+                    <div class="project-info-landscape">
+                        <h3>Urban Garden Development</h3>
+                        <p>Well-maintained garden featuring diverse plants, pathways, and integration with surrounding urban structures.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="gallery.html" class="btn-primary btn-large">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Outdoor Spaces?</h2>
+            <p>Connect with our landscape architects for a consultation</p>
+            <div class="hero-cta">
+                <a href="get-started.html" class="btn-primary btn-large" style="background-color: var(--secondary-color); color: var(--white);">Get Started</a>
+                <a href="contact.html" class="btn-secondary btn-large" style="background-color: var(--white); color: var(--secondary-color);">Request Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="index.html" class="logo">
+                            <img src="https://www.genspark.ai/api/files/s/axmxPgKM" alt="Vertvista - India's Trusted Biophilia & Greening Partner" class="logo-img">
+                        </a>
+                    </div>
+                    <p class="tagline">Breathe • Grow • Thrive</p>
+                    <p>India's most trusted biophilia & greening partner.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="maintenance.html">Maintenance Services</a></li>
+                        <li><a href="planters.html">Planters</a></li>
+                        <li><a href="green-walls.html">Green Walls</a></li>
+                        <li><a href="green-facade.html">Green Façade</a></li>
+                        <li><a href="moss-art.html">Moss Art</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> eco@vertvista.com</li>
+                        <li><i class="fas fa-globe"></i> www.vertvista.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India (HQ)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vertvista Eco Solutions Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

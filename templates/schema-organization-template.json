@@ -1,0 +1,88 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+  "name": "Vertvista Eco Solutions Pvt. Ltd.",
+  "alternateName": [
+    "Vertvista",
+    "Vertvista Eco Solutions",
+    "Vertvista India"
+  ],
+  "url": "https://www.vertvista.com",
+  "logo": "https://www.vertvista.com/images/Vertvista-Logo-Green.png",
+  "description": "India's leading provider of workplace biophilia solutions including indoor plants, green walls, moss art, landscape design, and maintenance services for corporate offices, architects, and facility managers across Mumbai, Bangalore, Pune, Chennai, Hyderabad, and Gujarat.",
+  "telephone": "+91-7045251178",
+  "email": "info@vertvista.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Mumbai",
+      "containedInPlace": {"@type": "State", "name": "Maharashtra"}
+    },
+    {
+      "@type": "City",
+      "name": "Pune",
+      "containedInPlace": {"@type": "State", "name": "Maharashtra"}
+    },
+    {
+      "@type": "City",
+      "name": "Bangalore",
+      "containedInPlace": {"@type": "State", "name": "Karnataka"}
+    },
+    {
+      "@type": "City",
+      "name": "Chennai",
+      "containedInPlace": {"@type": "State", "name": "Tamil Nadu"}
+    },
+    {
+      "@type": "City",
+      "name": "Hyderabad",
+      "containedInPlace": {"@type": "State", "name": "Telangana"}
+    },
+    {
+      "@type": "State",
+      "name": "Gujarat"
+    }
+  ],
+  "sameAs": [
+    "[LINKEDIN_URL]",
+    "[FACEBOOK_URL]",
+    "[INSTAGRAM_URL]"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Vertvista Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "[SERVICE_NAME_1]",
+          "description": "[SERVICE_DESCRIPTION_1]"
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Biophilic Design",
+    "Indoor Plants",
+    "Green Walls",
+    "Vertical Gardens",
+    "Moss Art",
+    "Plant Maintenance",
+    "Landscape Design",
+    "Sustainable Architecture",
+    "Workplace Wellness",
+    "Urban Greening",
+    "Green Facades",
+    "FRP Planters",
+    "Office Plants",
+    "Corporate Landscaping"
+  ],
+  "slogan": "Breathe • Grow • Thrive"
+}

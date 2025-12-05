@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.vertvista.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "[SECTION_NAME]",
+      "item": "https://www.vertvista.com/#[section-anchor]"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "[PAGE_NAME]",
+      "item": "https://www.vertvista.com/[page-file].html"
+    }
+  ]
+}

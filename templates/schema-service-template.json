@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "[SERVICE_TYPE]",
+  "name": "[SERVICE_NAME]",
+  "description": "[DETAILED_DESCRIPTION - Include: what service provides, key benefits, coverage areas, unique features. Aim for 150-200 words for LLM comprehension]",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Vertvista Eco Solutions Pvt. Ltd.",
+    "telephone": "+91-7045251178",
+    "email": "info@vertvista.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressCountry": "IN"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Mumbai"},
+      {"@type": "City", "name": "Pune"},
+      {"@type": "City", "name": "Bangalore"},
+      {"@type": "City", "name": "Chennai"},
+      {"@type": "City", "name": "Hyderabad"},
+      {"@type": "State", "name": "Gujarat"}
+    ]
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "[CATALOG_NAME]",
+    "itemListElement": [
+      {
+        "@type": "[Service|Product|Offer]",
+        "name": "[OFFERING_NAME_1]",
+        "description": "[OFFERING_DESCRIPTION_1]"
+      },
+      {
+        "@type": "[Service|Product|Offer]",
+        "name": "[OFFERING_NAME_2]",
+        "description": "[OFFERING_DESCRIPTION_2]"
+      }
+    ]
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "[PROPERTY_NAME_1]",
+      "value": "[PROPERTY_VALUE_1]"
+    }
+  ],
+  "knowsAbout": [
+    "[EXPERTISE_KEYWORD_1]",
+    "[EXPERTISE_KEYWORD_2]",
+    "[EXPERTISE_KEYWORD_3]"
+  ]
+}

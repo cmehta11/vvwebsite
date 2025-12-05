@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vertvista's commitment to environmental sustainability. Eco-friendly practices, sustainable sourcing, carbon offset programs, and green building contributions. LEED, IGBC, WELL certified solutions.">
+    <title>Sustainability Commitment - Vertvista Eco Solutions</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Sustainability Page Styles */
+        .sustainability-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 50%, #388E3C 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sustainability-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+            opacity: 0.1;
+        }
+        
+        .sustainability-hero h1 {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sustainability-hero p {
+            font-size: 20px;
+            color: white;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .impact-metrics {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(76, 175, 80, 0.2);
+        }
+        
+        .metric-card i {
+            font-size: 48px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .metric-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: #CCFF00;
+            line-height: 1;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(76, 175, 80, 0.2);
+        }
+        
+        .metric-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2C3E1F;
+            margin-bottom: 10px;
+        }
+        
+        .metric-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .practices-section {
+            padding: 80px 0;
+        }
+        
+        .practices-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .practice-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .practice-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #CCFF00, #A8D500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .practice-icon i {
+            font-size: 32px;
+            color: #2C3E1F;
+        }
+        
+        .practice-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2C3E1F;
+        }
+        
+        .practice-card p {
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .practice-list {
+            list-style: none;
+        }
+        
+        .practice-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .practice-list i {
+            color: #4CAF50;
+            font-size: 16px;
+        }
+        
+        .certifications-section {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+        
+        .certifications-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .cert-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .cert-logo {
+            height: 80px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cert-logo i {
+            font-size: 64px;
+            color: #4CAF50;
+        }
+        
+        .cert-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #2C3E1F;
+        }
+        
+        .cert-card p {
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 15px;
+        }
+        
+        .cert-card ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .cert-card ul li {
+            padding: 8px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .goals-timeline {
+            padding: 80px 0;
+        }
+        
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .goal-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #CCFF00;
+        }
+        
+        .goal-year {
+            display: inline-block;
+            background: #CCFF00;
+            color: #2C3E1F;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .goal-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #2C3E1F;
+        }
+        
+        .goal-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .goal-progress {
+            position: relative;
+            height: 8px;
+            background: #E0E0E0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #CCFF00);
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+        
+        .progress-label {
+            display: block;
+            margin-top: 8px;
+            font-size: 13px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .partnerships-section {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+        
+        .partnerships-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .partnership-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .partnership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .partnership-card i {
+            font-size: 40px;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .partnership-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #2C3E1F;
+        }
+        
+        .partnership-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 1024px) {
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .practices-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .certifications-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sustainability-hero h1 {
+                font-size: 32px;
+            }
+            
+            .metrics-grid,
+            .practices-grid,
+            .goals-grid,
+            .partnerships-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <img src="https://www.genspark.ai/api/files/s/BzsM3pWD" alt="Vertvista - India's Trusted Biophilia & Greening Partner" class="logo-img">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Nav Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="indoor-plants.html">Indoor Plants</a></li>
+                            <li><a href="maintenance.html">Maintenance Services</a></li>
+                            <li><a href="planters.html">Planters Collection</a></li>
+                            <li><a href="green-walls.html">Green Wall Systems</a></li>
+                            <li><a href="green-facade.html">Green Façade</a></li>
+                            <li><a href="moss-art.html">Moss Art</a></li>
+                            <li><a href="biophilic-design.html">Biophilic Design</a></li>
+                            <li><a href="landscape-design.html">Landscape Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="downloads.html">Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Locations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bangalore.html">Bangalore</a></li>
+                            <li><a href="pune.html">Pune</a></li>
+                            <li><a href="mumbai.html">Mumbai</a></li>
+                            <li><a href="chennai.html">Chennai</a></li>
+                            <li><a href="hyderabad.html">Hyderabad</a></li>
+                            <li><a href="gujarat.html">Gujarat</a></li>
+                            <li><a href="delhi-ncr.html">Delhi NCR</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="get-started.html" class="btn-primary btn-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="sustainability-hero">
+        <div class="container">
+            <h1>Our Sustainability Commitment</h1>
+            <p>Building a greener future through responsible practices, innovative solutions, and measurable environmental impact</p>
+        </div>
+    </section>
+
+    <!-- Environmental Impact Metrics -->
+    <section class="impact-metrics">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Environmental Impact</h2>
+                <p>Measurable results from our sustainability initiatives</p>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <i class="fas fa-leaf"></i>
+                    <div class="metric-number">2.5M+</div>
+                    <div class="metric-label">Plants Installed Annually</div>
+                    <p class="metric-description">Contributing to urban air purification and carbon sequestration</p>
+                </div>
+                
+                <div class="metric-card">
+                    <i class="fas fa-tint"></i>
+                    <div class="metric-number">40%</div>
+                    <div class="metric-label">Water Savings</div>
+                    <p class="metric-description">Through drip irrigation and water-efficient plant selection</p>
+                </div>
+                
+                <div class="metric-card">
+                    <i class="fas fa-recycle"></i>
+                    <div class="metric-number">85%</div>
+                    <div class="metric-label">Waste Recycling Rate</div>
+                    <p class="metric-description">Composting green waste and recycling packaging materials</p>
+                </div>
+                
+                <div class="metric-card">
+                    <i class="fas fa-tree"></i>
+                    <div class="metric-number">15,000+</div>
+                    <div class="metric-label">CO₂ Offset (tonnes/year)</div>
+                    <p class="metric-description">Through installed plants and green infrastructure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainable Practices -->
+    <section class="practices-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Sustainable Practices</h2>
+                <p>Six pillars of environmental responsibility</p>
+            </div>
+            
+            <div class="practices-grid">
+                <!-- 1. Responsible Sourcing -->
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Responsible Sourcing</h3>
+                    <p>We partner with certified nurseries and ethical suppliers to ensure sustainable plant cultivation.</p>
+                    <ul class="practice-list">
+                        <li><i class="fas fa-check"></i> No endangered species</li>
+                        <li><i class="fas fa-check"></i> Locally sourced when possible</li>
+                        <li><i class="fas fa-check"></i> Organic growing methods preferred</li>
+                        <li><i class="fas fa-check"></i> Fair trade moss from European partners</li>
+                    </ul>
+                </div>
+                
+                <!-- 2. Water Conservation -->
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Water Conservation</h3>
+                    <p>Advanced irrigation systems and water management reduce consumption by up to 40%.</p>
+                    <ul class="practice-list">
+                        <li><i class="fas fa-check"></i> Drip irrigation systems with timers</li>
+                        <li><i class="fas fa-check"></i> Rainwater harvesting integration</li>
+                        <li><i class="fas fa-check"></i> Drought-tolerant plant selection</li>
+                        <li><i class="fas fa-check"></i> Soil moisture sensors</li>
+                    </ul>
+                </div>
+                
+                <!-- 3. Eco-Friendly Materials -->
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Eco-Friendly Materials</h3>
+                    <p>We prioritize sustainable, recyclable, and non-toxic materials in all our products.</p>
+                    <ul class="practice-list">
+                        <li><i class="fas fa-check"></i> Recyclable FRP planters</li>
+                        <li><i class="fas fa-check"></i> FSC-certified wooden elements</li>
+                        <li><i class="fas fa-check"></i> Non-toxic, water-based finishes</li>
+                        <li><i class="fas fa-check"></i> Biodegradable packaging</li>
+                    </ul>
+                </div>
+                
+                <!-- 4. Waste Reduction -->
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <h3>Waste Reduction & Recycling</h3>
+                    <p>Comprehensive waste management with 85% recycling rate across operations.</p>
+                    <ul class="practice-list">
+                        <li><i class="fas fa-check"></i> Composting plant trimmings</li>
+                        <li><i class="fas fa-check"></i> Recycling planter materials</li>
+                        <li><i class="fas fa-check"></i> Minimal packaging design</li>
+                        <li><i class="fas fa-check"></i> Zero single-use plastics</li>
+                    </ul>
+                </div>
+                
+                <!-- 5. Energy Efficiency -->
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Energy Efficiency</h3>
+                    <p>Our operations and solutions contribute to building energy savings.</p>
+                    <ul class="practice-list">
+                        <li><i class="fas fa-check"></i> LED grow lights for indoor plants</li>
+                        <li><i class="fas fa-check"></i> Solar-powered irrigation timers</li>
+                        <li><i class="fas fa-check"></i> Green walls reduce HVAC loads by 30%</li>
+                        <li><i class="fas fa-check"></i> Electric vehicle fleet (pilot program)</li>
+                    </ul>
+                </div>
+                
+                <!-- 6. Biodiversity Support -->
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                    <h3>Biodiversity Support</h3>
+                    <p>Promoting urban biodiversity through native plant species and pollinator-friendly designs.</p>
+                    <ul class="practice-list">
+                        <li><i class="fas fa-check"></i> Native species prioritization</li>
+                        <li><i class="fas fa-check"></i> Pollinator-friendly plant selection</li>
+                        <li><i class="fas fa-check"></i> Bird-friendly façade designs</li>
+                        <li><i class="fas fa-check"></i> Urban wildlife habitat creation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Green Building Certifications -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Contributing to Green Building Standards</h2>
+                <p>Our solutions help achieve LEED, IGBC, and WELL Building certifications</p>
+            </div>
+            
+            <div class="certifications-content">
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>LEED Points Contribution</h3>
+                    <p>Our biophilic installations contribute to multiple LEED credit categories:</p>
+                    <ul>
+                        <li>• Sustainable Sites (SS)</li>
+                        <li>• Water Efficiency (WE)</li>
+                        <li>• Indoor Environmental Quality (IEQ)</li>
+                        <li>• Innovation in Design (ID)</li>
+                    </ul>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>IGBC Green Building Ratings</h3>
+                    <p>Supporting Indian Green Building Council standards through:</p>
+                    <ul>
+                        <li>• Native landscaping credits</li>
+                        <li>• Water conservation measures</li>
+                        <li>• Urban heat island mitigation</li>
+                        <li>• Indoor air quality improvement</li>
+                    </ul>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-logo">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>WELL Building Standard</h3>
+                    <p>Enhancing occupant health and wellness:</p>
+                    <ul>
+                        <li>• Biophilic design features</li>
+                        <li>• Air quality optimization</li>
+                        <li>• Circadian lighting support</li>
+                        <li>• Stress reduction environments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2030 Sustainability Goals -->
+    <section class="goals-timeline">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our 2030 Sustainability Goals</h2>
+                <p>Ambitious targets for the next decade</p>
+            </div>
+            
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-year">2025</div>
+                    <h3>Carbon Neutral Operations</h3>
+                    <p>Achieving net-zero carbon emissions across all our offices and facilities through renewable energy and carbon offsetting.</p>
+                    <div class="goal-progress">
+                        <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+                    <span class="progress-label">75% Complete</span>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-year">2027</div>
+                    <h3>Zero Waste to Landfill</h3>
+                    <p>100% of operational waste diverted from landfills through recycling, composting, and circular economy initiatives.</p>
+                    <div class="goal-progress">
+                        <div class="progress-bar" style="width: 55%"></div>
+                    </div>
+                    <span class="progress-label">55% Complete</span>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-year">2028</div>
+                    <h3>Sustainable Supply Chain</h3>
+                    <p>100% of suppliers certified for sustainable and ethical practices, with full supply chain transparency.</p>
+                    <div class="goal-progress">
+                        <div class="progress-bar" style="width: 40%"></div>
+                    </div>
+                    <span class="progress-label">40% Complete</span>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-year">2030</div>
+                    <h3>10 Million Plants Milestone</h3>
+                    <p>Installing 10 million plants across India, creating significant urban carbon sinks and improving air quality nationwide.</p>
+                    <div class="goal-progress">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                    <span class="progress-label">25% Complete</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnerships & Initiatives -->
+    <section class="partnerships-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Partnerships & Initiatives</h2>
+                <p>Collaborating for greater environmental impact</p>
+            </div>
+            
+            <div class="partnerships-grid">
+                <div class="partnership-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>NGO Partnerships</h3>
+                    <p>Collaborating with environmental NGOs for urban greening projects and community gardens.</p>
+                </div>
+                
+                <div class="partnership-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Educational Programs</h3>
+                    <p>Workshops and training programs on sustainable landscaping and biophilic design principles.</p>
+                </div>
+                
+                <div class="partnership-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Greening</h3>
+                    <p>Pro bono installations for schools, public spaces, and community centers.</p>
+                </div>
+                
+                <div class="partnership-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Research Collaborations</h3>
+                    <p>Partnering with universities on urban ecology and environmental impact research.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section-padding bg-primary">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Join Our Sustainability Journey</h2>
+                <p>Partner with us to create environmentally responsible, beautiful spaces</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-white btn-large">Get in Touch</a>
+                    <a href="about.html" class="btn-outline btn-large">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/Vertvista-Logo-White.png" alt="Vertvista Logo" style="height: 45px; width: auto;">
+                    </div>
+                    <p class="tagline">Breathe • Grow • Thrive</p>
+                    <p>India's most trusted workplace biophilia partner, transforming corporate spaces with nature-integrated solutions.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="maintenance.html">Maintenance Services</a></li>
+                        <li><a href="planters.html">Planters Collection</a></li>
+                        <li><a href="green-walls.html">Green Wall Systems</a></li>
+                        <li><a href="green-facade.html">Green Façade</a></li>
+                        <li><a href="moss-art.html">Moss Art</a></li>
+                        <li><a href="biophilic-design.html">Biophilic Design</a></li>
+                        <li><a href="landscape-design.html">Landscape Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> eco@vertvista.com</li>
+                        <li><i class="fas fa-globe"></i> www.vertvista.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India (HQ)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vertvista Eco Solutions Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
