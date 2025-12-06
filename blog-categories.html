@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Vertvista blog articles by category: Plant Care Tips, Biophilic Design, Corporate Wellness, Sustainability, DIY Guides, and Industry News. Find exactly what you're looking for.">
+    <meta name="keywords" content="biophilic design blog, plant care articles, office plants blog India, corporate wellness articles, green design insights">
+    <title>Blog Categories | Browse by Topic | Vertvista</title>
+    
+    <!-- CollectionPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Vertvista Blog Categories",
+      "description": "Browse our blog articles organized by topic including plant care tips, biophilic design, corporate wellness, sustainability guides, and industry news.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vertvista Eco Solutions Pvt. Ltd."
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "item": {"@type": "Thing", "name": "Plant Care Tips", "description": "Expert advice on caring for indoor plants in Indian office environments"}},
+          {"@type": "ListItem", "position": 2, "item": {"@type": "Thing", "name": "Biophilic Design", "description": "Design principles and case studies for nature-integrated workspaces"}},
+          {"@type": "ListItem", "position": 3, "item": {"@type": "Thing", "name": "Corporate Wellness", "description": "Research and insights on workplace wellbeing through biophilia"}},
+          {"@type": "ListItem", "position": 4, "item": {"@type": "Thing", "name": "Sustainability", "description": "Eco-friendly practices, green building certifications, and environmental impact"}},
+          {"@type": "ListItem", "position": 5, "item": {"@type": "Thing", "name": "DIY Guides", "description": "Step-by-step tutorials for plant care, propagation, and small-scale greening"}},
+          {"@type": "ListItem", "position": 6, "item": {"@type": "Thing", "name": "Industry News", "description": "Latest trends, research, and developments in biophilic design industry"}}
+        ]
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What topics does the Vertvista blog cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Vertvista blog covers six main categories: 1) Plant Care Tips - seasonal watering guides, troubleshooting, species-specific care for Indian conditions. 2) Biophilic Design - design principles, case studies, workplace integration strategies. 3) Corporate Wellness - research on productivity, stress reduction, air quality benefits. 4) Sustainability - LEED/IGBC contributions, carbon offset, eco-friendly practices. 5) DIY Guides - propagation tutorials, small space solutions, budget-friendly greening. 6) Industry News - trends, research updates, new products."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often is the Vertvista blog updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We publish 2-4 new articles monthly. Content is timed around seasonal plant care needs (monsoon care in June-August, summer tips in March-May), industry events, and research releases. Subscribe to our newsletter for weekly digests of new content, or follow us on LinkedIn for immediate updates. All articles are written or reviewed by our in-house horticulturists and biophilic design consultants."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vertvista.com"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.vertvista.com/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "Categories", "item": "https://www.vertvista.com/blog-categories.html"}
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    
+    <style>
+        .page-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #1976d2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .page-hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .page-hero p { font-size: 20px; opacity: 0.95; max-width: 700px; margin: 0 auto; }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            list-style: none;
+        }
+        
+        .breadcrumb-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .breadcrumb-list li a {
+            color: #1565c0;
+            text-decoration: none;
+        }
+        
+        .breadcrumb-list li a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb-list li:last-child {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        /* Categories Section */
+        .categories-section {
+            padding: 60px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .category-header {
+            padding: 30px;
+            color: white;
+            position: relative;
+        }
+        
+        .category-header.plant-care { background: linear-gradient(135deg, #2e7d32, #43a047); }
+        .category-header.biophilic { background: linear-gradient(135deg, #1565c0, #1976d2); }
+        .category-header.wellness { background: linear-gradient(135deg, #6a1b9a, #8e24aa); }
+        .category-header.sustainability { background: linear-gradient(135deg, #00695c, #00897b); }
+        .category-header.diy { background: linear-gradient(135deg, #e65100, #f57c00); }
+        .category-header.news { background: linear-gradient(135deg, #c62828, #e53935); }
+        
+        .category-header i {
+            font-size: 36px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .category-header h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .article-count {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        .category-content {
+            padding: 25px 30px;
+        }
+        
+        .category-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        /* Popular Topics */
+        .popular-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .topic-tag {
+            background: #f0f0f0;
+            color: #555;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .category-card:hover .topic-tag {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        /* View Button */
+        .view-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1565c0;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .view-btn i {
+            transition: transform 0.2s ease;
+        }
+        
+        .category-card:hover .view-btn i {
+            transform: translateX(5px);
+        }
+        
+        /* Quick Answer Box */
+        .quick-answer-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 4px solid #1565c0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .quick-answer-box h3 {
+            color: #1565c0;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .quick-answer-box p {
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* Featured Articles Section */
+        .featured-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .featured-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .featured-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .featured-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .featured-content {
+            padding: 20px;
+        }
+        
+        .featured-category {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .featured-content h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .featured-content p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .btn-white {
+            background: white;
+            color: #1565c0;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #1565c0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 32px; }
+            .category-grid { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://www.genspark.ai/api/files/s/BzsM3pWD" alt="Vertvista Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="indoor-plants.html">Indoor Plants</a></li>
+                        <li><a href="maintenance.html">Maintenance</a></li>
+                        <li><a href="planters.html">Planters</a></li>
+                        <li><a href="green-walls.html">Green Walls</a></li>
+                        <li><a href="green-facade.html">Green Façade</a></li>
+                        <li><a href="moss-art.html">Moss Art</a></li>
+                        <li><a href="biophilic-design.html">Biophilic Design</a></li>
+                        <li><a href="landscape-design.html">Landscape Design</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="biophilic-design-glossary.html">Glossary</a></li>
+                        <li><a href="biophilic-design-statistics.html">Statistics & Research</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Locations <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="bangalore.html">Bangalore</a></li>
+                        <li><a href="mumbai.html">Mumbai</a></li>
+                        <li><a href="delhi-ncr.html">Delhi NCR</a></li>
+                        <li><a href="chennai.html">Chennai</a></li>
+                        <li><a href="hyderabad.html">Hyderabad</a></li>
+                        <li><a href="pune.html">Pune</a></li>
+                        <li><a href="gujarat.html">Gujarat</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="get-started.html" class="btn btn-nav">Get Started</a>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1><i class="fas fa-th-large"></i> Blog Categories</h1>
+            <p>Explore our articles organized by topic. Find plant care tips, design inspiration, wellness research, and more.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><i class="fas fa-chevron-right"></i></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><i class="fas fa-chevron-right"></i></li>
+            <li>Categories</li>
+        </ol>
+    </nav>
+
+    <!-- Quick Answer Box -->
+    <div class="quick-answer-box">
+        <h3><i class="fas fa-bolt"></i> What Topics Does the Vertvista Blog Cover?</h3>
+        <p><strong>Our blog covers 6 main categories:</strong> Plant Care Tips (seasonal watering, troubleshooting, species guides for Indian offices), Biophilic Design (case studies, design principles, workplace integration), Corporate Wellness (productivity research, stress reduction, air quality), Sustainability (LEED/IGBC contributions, carbon offset), DIY Guides (propagation, budget-friendly greening), and Industry News (trends, new products, research updates). We publish 2-4 articles monthly.</p>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="section-header">
+            <h2>Browse by Category</h2>
+            <p>Click any category to see all related articles</p>
+        </div>
+        
+        <div class="category-grid">
+            <!-- Plant Care Tips -->
+            <a href="blog.html?category=plant-care" class="category-card">
+                <div class="category-header plant-care">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Plant Care Tips</h3>
+                    <span class="article-count">18 Articles</span>
+                </div>
+                <div class="category-content">
+                    <p>Expert advice on caring for indoor plants in Indian office environments. Seasonal guides, troubleshooting, and species-specific care instructions.</p>
+                    <div class="popular-topics">
+                        <span class="topic-tag">Watering Guides</span>
+                        <span class="topic-tag">Monsoon Care</span>
+                        <span class="topic-tag">Low Light Plants</span>
+                        <span class="topic-tag">Pest Control</span>
+                    </div>
+                    <span class="view-btn">View Articles <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Biophilic Design -->
+            <a href="blog.html?category=biophilic-design" class="category-card">
+                <div class="category-header biophilic">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Biophilic Design</h3>
+                    <span class="article-count">12 Articles</span>
+                </div>
+                <div class="category-content">
+                    <p>Design principles and case studies for creating nature-integrated workspaces. Learn the 14 patterns of biophilic design and implementation strategies.</p>
+                    <div class="popular-topics">
+                        <span class="topic-tag">14 Patterns</span>
+                        <span class="topic-tag">Case Studies</span>
+                        <span class="topic-tag">Office Design</span>
+                        <span class="topic-tag">Green Walls</span>
+                    </div>
+                    <span class="view-btn">View Articles <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Corporate Wellness -->
+            <a href="blog.html?category=wellness" class="category-card">
+                <div class="category-header wellness">
+                    <i class="fas fa-heart"></i>
+                    <h3>Corporate Wellness</h3>
+                    <span class="article-count">8 Articles</span>
+                </div>
+                <div class="category-content">
+                    <p>Research and insights on workplace wellbeing through biophilia. Discover how plants affect productivity, stress, and employee satisfaction.</p>
+                    <div class="popular-topics">
+                        <span class="topic-tag">Productivity</span>
+                        <span class="topic-tag">Stress Reduction</span>
+                        <span class="topic-tag">Air Quality</span>
+                        <span class="topic-tag">ROI Studies</span>
+                    </div>
+                    <span class="view-btn">View Articles <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Sustainability -->
+            <a href="blog.html?category=sustainability" class="category-card">
+                <div class="category-header sustainability">
+                    <i class="fas fa-globe"></i>
+                    <h3>Sustainability</h3>
+                    <span class="article-count">6 Articles</span>
+                </div>
+                <div class="category-content">
+                    <p>Eco-friendly practices, green building certifications, and environmental impact of biophilic design. LEED, IGBC, and GRIHA contribution guides.</p>
+                    <div class="popular-topics">
+                        <span class="topic-tag">LEED Credits</span>
+                        <span class="topic-tag">Carbon Offset</span>
+                        <span class="topic-tag">IGBC</span>
+                        <span class="topic-tag">Eco-Friendly</span>
+                    </div>
+                    <span class="view-btn">View Articles <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- DIY Guides -->
+            <a href="blog.html?category=diy" class="category-card">
+                <div class="category-header diy">
+                    <i class="fas fa-hands"></i>
+                    <h3>DIY Guides</h3>
+                    <span class="article-count">10 Articles</span>
+                </div>
+                <div class="category-content">
+                    <p>Step-by-step tutorials for plant care, propagation, and small-scale greening projects. Budget-friendly ideas for personal desks and home offices.</p>
+                    <div class="popular-topics">
+                        <span class="topic-tag">Propagation</span>
+                        <span class="topic-tag">Desk Plants</span>
+                        <span class="topic-tag">Budget Ideas</span>
+                        <span class="topic-tag">Home Office</span>
+                    </div>
+                    <span class="view-btn">View Articles <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Industry News -->
+            <a href="blog.html?category=news" class="category-card">
+                <div class="category-header news">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>Industry News</h3>
+                    <span class="article-count">5 Articles</span>
+                </div>
+                <div class="category-content">
+                    <p>Latest trends, research findings, and developments in the biophilic design industry. Stay updated on innovations and market insights.</p>
+                    <div class="popular-topics">
+                        <span class="topic-tag">2025 Trends</span>
+                        <span class="topic-tag">Research</span>
+                        <span class="topic-tag">Innovations</span>
+                        <span class="topic-tag">Events</span>
+                    </div>
+                    <span class="view-btn">View Articles <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="featured-section">
+        <div class="section-header">
+            <h2>Most Popular Articles</h2>
+            <p>Our most-read articles across all categories</p>
+        </div>
+        
+        <div class="featured-grid">
+            <a href="best-indoor-plants-office-india.html" class="featured-card">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=85" alt="Best Indoor Plants for Office">
+                <div class="featured-content">
+                    <span class="featured-category">Plant Care</span>
+                    <h3>15 Best Indoor Plants for Indian Offices</h3>
+                    <p>Complete guide to choosing the right plants for your office environment, with care tips for each species.</p>
+                </div>
+            </a>
+
+            <a href="benefits-of-biophilic-design-workplace.html" class="featured-card">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=85" alt="Benefits of Biophilic Design">
+                <div class="featured-content">
+                    <span class="featured-category">Wellness</span>
+                    <h3>The Science Behind Biophilic Design Benefits</h3>
+                    <p>Research-backed insights on how biophilia improves productivity, reduces stress, and enhances wellbeing.</p>
+                </div>
+            </a>
+
+            <a href="green-walls-complete-guide-india.html" class="featured-card">
+                <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=400&q=85" alt="Green Walls Guide">
+                <div class="featured-content">
+                    <span class="featured-category">Biophilic Design</span>
+                    <h3>Complete Guide to Green Walls in India</h3>
+                    <p>Everything you need to know about living walls: types, costs, installation, and maintenance.</p>
+                </div>
+            </a>
+
+            <a href="seasonal-plant-care-india-monsoon-summer.html" class="featured-card">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=85" alt="Seasonal Plant Care">
+                <div class="featured-content">
+                    <span class="featured-category">Plant Care</span>
+                    <h3>Seasonal Plant Care for Indian Climate</h3>
+                    <p>Adjust your plant care routine for monsoon, summer, and winter conditions in Indian offices.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Want More Content?</h2>
+        <p>Subscribe to our newsletter for weekly digests, exclusive content, and early access to new articles.</p>
+        <div class="cta-buttons">
+            <a href="newsletter-archive.html" class="btn-white"><i class="fas fa-envelope"></i> Subscribe to Newsletter</a>
+            <a href="blog.html" class="btn-outline"><i class="fas fa-book"></i> View All Articles</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="https://www.genspark.ai/api/files/s/BzsM3pWD" alt="Vertvista Logo" class="footer-logo">
+                    <p>India's leading biophilic design company bringing nature into corporate spaces since 2012. Trusted by 200+ companies across 7 cities.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="indoor-plants.html">Indoor Plants</a></li>
+                        <li><a href="green-walls.html">Green Walls</a></li>
+                        <li><a href="moss-art.html">Moss Art</a></li>
+                        <li><a href="planters.html">Planters</a></li>
+                        <li><a href="biophilic-design.html">Biophilic Design</a></li>
+                        <li><a href="landscape-design.html">Landscape Design</a></li>
+                        <li><a href="maintenance.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="biophilic-design-glossary.html">Glossary</a></li>
+                        <li><a href="biophilic-design-statistics.html">Statistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai | Bangalore | Delhi NCR | Hyderabad | Chennai | Pune | Gujarat</p>
+                    <p><i class="fas fa-phone"></i> +91-22-4000-XXXX</p>
+                    <p><i class="fas fa-envelope"></i> hello@vertvista.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vertvista Eco Solutions Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
