@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find the perfect plant for your office! Take our 5-question quiz to get personalized plant recommendations based on your light, space, and care preferences. Free tool by Vertvista.">
+    <meta name="keywords" content="office plant quiz, find perfect plant, plant recommendation, best plant for my office, indoor plant finder India">
+    <title>Plant Finder Quiz | Find Your Perfect Office Plant | Vertvista</title>
+    
+    <!-- Quiz Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "Find Your Perfect Office Plant Quiz",
+      "description": "Answer 5 simple questions to discover the ideal indoor plant for your workspace based on light conditions, maintenance preference, space available, and air quality needs.",
+      "educationalLevel": "beginner",
+      "about": {
+        "@type": "Thing",
+        "name": "Indoor Office Plants"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Vertvista Eco Solutions Pvt. Ltd."
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best low-maintenance plant for office?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best low-maintenance office plants are Snake Plant (Sansevieria), ZZ Plant, and Pothos (Money Plant). These plants can survive weeks without water, tolerate low light, and require minimal care. Snake Plants are particularly hardy and can go 2-3 weeks without watering while also purifying air. They're perfect for busy professionals and offices without direct sunlight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which plant is best for office desk with no sunlight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For desks with no natural sunlight, choose: 1) ZZ Plant - thrives in artificial light, extremely hardy; 2) Snake Plant - survives in any light condition; 3) Pothos - adapts to low light, can grow under fluorescent lights; 4) Cast Iron Plant - virtually indestructible; 5) Chinese Evergreen - tolerates poor light and air conditioning. These plants can survive on office fluorescent lighting alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What plants are best for air purification in office?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to NASA's Clean Air Study, the best air-purifying plants for offices are: 1) Peace Lily - removes benzene, formaldehyde, trichloroethylene; 2) Snake Plant - converts CO2 to oxygen at night; 3) Spider Plant - removes carbon monoxide and xylene; 4) Areca Palm - excellent overall air purifier; 5) Boston Fern - removes formaldehyde; 6) Rubber Plant - effective against mold spores. Place one plant per 100 sq ft for optimal air cleaning."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    
+    <style>
+        .page-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .page-hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .page-hero p { font-size: 20px; opacity: 0.95; max-width: 700px; margin: 0 auto; }
+        
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        /* Progress Bar */
+        .quiz-progress {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+        
+        .quiz-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Question Card */
+        .question-card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .question-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+        }
+        
+        .question-icon i {
+            font-size: 2.5rem;
+            color: #2D5016;
+        }
+        
+        .question-card h2 {
+            color: #2D5016;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .question-card .question-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        
+        /* Answer Options */
+        .answer-options {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .answer-option {
+            padding: 20px 25px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: left;
+        }
+        
+        .answer-option:hover {
+            border-color: #4CAF50;
+            background: #f0f7f0;
+            transform: translateX(5px);
+        }
+        
+        .answer-option.selected {
+            border-color: #4CAF50;
+            background: #e8f5e9;
+        }
+        
+        .answer-option .option-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background: #f5f5f5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .answer-option.selected .option-icon {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .option-text {
+            flex: 1;
+        }
+        
+        .option-text strong {
+            display: block;
+            color: #2D5016;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .option-text span {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Navigation */
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .quiz-btn {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .quiz-btn.back {
+            background: #f5f5f5;
+            color: #666;
+        }
+        
+        .quiz-btn.back:hover {
+            background: #e0e0e0;
+        }
+        
+        .quiz-btn.next {
+            background: linear-gradient(135deg, #2D5016, #3D6B1F);
+            color: white;
+        }
+        
+        .quiz-btn.next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(45, 80, 22, 0.3);
+        }
+        
+        .quiz-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        /* Results */
+        .results-container {
+            display: none;
+        }
+        
+        .results-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .results-header h2 {
+            color: #2D5016;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .results-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .plant-recommendation {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .plant-recommendation.top-pick {
+            border: 3px solid #4CAF50;
+            position: relative;
+        }
+        
+        .top-pick-badge {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .plant-image {
+            width: 150px;
+            height: 150px;
+            min-width: 150px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .plant-image i {
+            font-size: 4rem;
+            color: #2D5016;
+        }
+        
+        .plant-details h3 {
+            color: #2D5016;
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+        }
+        
+        .plant-details .match-score {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2D5016;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .plant-details p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .plant-traits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .trait-badge {
+            background: #f5f5f5;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        
+        .trait-badge i {
+            margin-right: 5px;
+            color: #4CAF50;
+        }
+        
+        .results-cta {
+            background: linear-gradient(135deg, #2D5016 0%, #3D6B1F 100%);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+        
+        .results-cta h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.5rem;
+        }
+        
+        .results-cta p {
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+        
+        .restart-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #f5f5f5;
+            color: #2D5016;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 32px; }
+            .question-card { padding: 30px; }
+            .plant-recommendation { flex-direction: column; text-align: center; }
+            .plant-image { margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="https://www.genspark.ai/api/files/s/BzsM3pWD" alt="Vertvista Logo" class="logo-img">
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="indoor-plants.html">Indoor Plants</a></li>
+                            <li><a href="maintenance.html">Maintenance Services</a></li>
+                            <li><a href="planters.html">Planters Collection</a></li>
+                            <li><a href="green-walls.html">Green Wall Systems</a></li>
+                            <li><a href="green-facade.html">Green Façade</a></li>
+                            <li><a href="moss-art.html">Moss Art</a></li>
+                            <li><a href="biophilic-design.html">Biophilic Design</a></li>
+                            <li><a href="landscape-design.html">Landscape Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="downloads.html">Downloads</a></li>
+                            <li><a href="biophilic-design-glossary.html">Glossary</a></li>
+                            <li><a href="biophilic-design-statistics.html">Statistics & Research</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Locations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bangalore.html">Bangalore</a></li>
+                            <li><a href="pune.html">Pune</a></li>
+                            <li><a href="mumbai.html">Mumbai</a></li>
+                            <li><a href="chennai.html">Chennai</a></li>
+                            <li><a href="hyderabad.html">Hyderabad</a></li>
+                            <li><a href="gujarat.html">Gujarat</a></li>
+                            <li><a href="delhi-ncr.html">Delhi NCR</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="get-started.html" class="btn-primary btn-nav">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1><i class="fas fa-magic"></i> Plant Finder Quiz</h1>
+            <p>Answer 5 simple questions to discover the perfect plant for your office space</p>
+        </div>
+    </section>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <!-- Quick Answer Box -->
+        <div class="quick-answer-box" style="margin-bottom: 30px;">
+            <h3 class="quick-answer-title"><i class="fas fa-bolt"></i> Quick Answer: Best Starter Plants</h3>
+            <p class="quick-answer-content">
+                <strong>Low maintenance:</strong> Snake Plant, ZZ Plant, Pothos<br>
+                <strong>Air purifying:</strong> Peace Lily, Spider Plant, Areca Palm<br>
+                <strong>Low light:</strong> Chinese Evergreen, Cast Iron Plant<br>
+                <strong>Statement plants:</strong> Monstera, Fiddle Leaf Fig
+            </p>
+        </div>
+        
+        <!-- Quiz Section -->
+        <div id="quizSection">
+            <div class="progress-text">Question <span id="currentQ">1</span> of 5</div>
+            <div class="quiz-progress">
+                <div class="quiz-progress-fill" id="progressBar"></div>
+            </div>
+            
+            <div class="question-card" id="questionCard">
+                <!-- Question content will be inserted here -->
+            </div>
+            
+            <div class="quiz-nav">
+                <button class="quiz-btn back" id="backBtn" onclick="previousQuestion()" disabled>
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <button class="quiz-btn next" id="nextBtn" onclick="nextQuestion()" disabled>
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="results-container" id="resultsSection">
+            <div class="results-header">
+                <h2><i class="fas fa-trophy" style="color: #FFC107;"></i> Your Perfect Plants!</h2>
+                <p>Based on your answers, here are our top recommendations:</p>
+            </div>
+            
+            <div id="recommendationsContainer">
+                <!-- Recommendations will be inserted here -->
+            </div>
+            
+            <div class="results-cta">
+                <h3>Want These Plants for Your Office?</h3>
+                <p>Get a free consultation and quote for plant rental or purchase with professional maintenance</p>
+                <a href="get-started.html" class="btn-primary" style="background: #CCFF00; color: #2D5016; padding: 15px 40px;">Get Free Quote</a>
+                <br>
+                <button class="restart-btn" onclick="restartQuiz()">
+                    <i class="fas fa-redo"></i> Retake Quiz
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo"><img src="https://www.genspark.ai/api/files/s/BzsM3pWD" alt="Vertvista Logo"></div>
+                    <p>India's trusted partner for workplace biophilia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="plant-finder-quiz.html">Plant Finder Quiz</a></li>
+                        <li><a href="plant-care-calculator.html">Care Calculator</a></li>
+                        <li><a href="roi-calculator.html">ROI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +91-7045251178</li>
+                        <li><i class="fas fa-envelope"></i> info@vertvista.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Vertvista Eco Solutions Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/enhancements.js"></script>
+    
+    <script>
+        // Questions data
+        const questions = [
+            {
+                icon: 'fa-sun',
+                title: 'How much natural light does your space get?',
+                subtitle: 'Look at your desk/area during daytime',
+                options: [
+                    { icon: '☀️', title: 'Bright Direct', desc: 'Direct sunlight hits the area for 4+ hours', value: 'bright-direct' },
+                    { icon: '🌤️', title: 'Bright Indirect', desc: 'Well-lit room but no direct sun on plants', value: 'bright-indirect' },
+                    { icon: '☁️', title: 'Medium Light', desc: 'Some natural light, few feet from windows', value: 'medium' },
+                    { icon: '🌙', title: 'Low/No Natural Light', desc: 'Far from windows, mostly artificial light', value: 'low' }
+                ]
+            },
+            {
+                icon: 'fa-clock',
+                title: 'How much time can you dedicate to plant care?',
+                subtitle: 'Be honest - plants need consistent care',
+                options: [
+                    { icon: '⏰', title: 'Very Little (Forgetful)', desc: "I might forget for weeks - need hardy plants", value: 'minimal' },
+                    { icon: '📅', title: 'Weekly Check-in', desc: "I can water and check plants once a week", value: 'weekly' },
+                    { icon: '🌱', title: 'Regular Care', desc: "I enjoy plant care, can do 2-3 times a week", value: 'regular' },
+                    { icon: '💚', title: 'Plant Enthusiast', desc: "I love plants and will give them lots of attention", value: 'dedicated' }
+                ]
+            },
+            {
+                icon: 'fa-ruler-combined',
+                title: 'How much space do you have?',
+                subtitle: 'Consider floor and desk/shelf space',
+                options: [
+                    { icon: '📱', title: 'Desktop Only', desc: 'Small plants that fit on desk (4-6" pots)', value: 'desktop' },
+                    { icon: '📚', title: 'Desk + Shelf', desc: 'Room for desktop and shelf plants', value: 'medium' },
+                    { icon: '🏢', title: 'Floor Space Available', desc: 'Can accommodate large floor planters', value: 'large' },
+                    { icon: '🏛️', title: 'Lots of Space', desc: 'Open area, can have multiple large plants', value: 'unlimited' }
+                ]
+            },
+            {
+                icon: 'fa-wind',
+                title: 'What benefit matters most to you?',
+                subtitle: 'Choose your primary goal',
+                options: [
+                    { icon: '🌬️', title: 'Air Purification', desc: 'Clean indoor air, remove toxins', value: 'air-purify' },
+                    { icon: '😌', title: 'Stress Relief', desc: 'Calming presence, reduce anxiety', value: 'stress' },
+                    { icon: '🎨', title: 'Aesthetics', desc: 'Beautiful, Instagram-worthy plants', value: 'aesthetics' },
+                    { icon: '🔇', title: 'Noise Reduction', desc: 'Create a quieter workspace', value: 'noise' }
+                ]
+            },
+            {
+                icon: 'fa-paw',
+                title: 'Any special requirements?',
+                subtitle: 'Select if applicable',
+                options: [
+                    { icon: '🐕', title: 'Pet-Friendly Required', desc: 'I have pets visiting the office', value: 'pet-safe' },
+                    { icon: '❄️', title: 'AC Environment', desc: 'Strong air conditioning, dry air', value: 'ac-tolerant' },
+                    { icon: '🌸', title: 'Want Flowering Plants', desc: 'Prefer plants with colorful blooms', value: 'flowering' },
+                    { icon: '✅', title: 'No Special Requirements', desc: 'Open to all recommendations', value: 'none' }
+                ]
+            }
+        ];
+        
+        // Plant database with matching criteria
+        const plants = [
+            { name: 'Snake Plant', traits: ['low-light', 'minimal-care', 'air-purify', 'ac-tolerant', 'pet-safe-no'], desc: 'Virtually indestructible. Survives neglect, low light, and purifies air even at night.', badges: ['Low Light', 'Drought Tolerant', 'Air Purifier'] },
+            { name: 'ZZ Plant', traits: ['low-light', 'minimal-care', 'aesthetics', 'ac-tolerant', 'pet-safe-no'], desc: 'Glossy, architectural leaves. Thrives on neglect and tolerates any light condition.', badges: ['Low Light', 'Drought Tolerant', 'Modern Look'] },
+            { name: 'Pothos (Money Plant)', traits: ['medium-light', 'weekly-care', 'air-purify', 'stress', 'pet-safe-no'], desc: 'Fast-growing trailing vine. Perfect for shelves and hangers. Very forgiving.', badges: ['Easy Care', 'Air Purifier', 'Fast Growing'] },
+            { name: 'Peace Lily', traits: ['medium-light', 'weekly-care', 'air-purify', 'flowering', 'pet-safe-no'], desc: 'Elegant white blooms. Top NASA air purifier. Shows when thirsty by drooping.', badges: ['Flowering', 'Top Air Purifier', 'Elegant'] },
+            { name: 'Spider Plant', traits: ['bright-indirect', 'weekly-care', 'air-purify', 'pet-safe', 'desktop'], desc: 'Pet-safe and produces baby plants. Excellent air purifier and very forgiving.', badges: ['Pet Safe', 'Air Purifier', 'Easy Care'] },
+            { name: 'Areca Palm', traits: ['bright-indirect', 'regular-care', 'air-purify', 'noise', 'large'], desc: 'Lush tropical feel. Excellent air purifier and natural humidifier. Makes a statement.', badges: ['Air Purifier', 'Tropical', 'Statement Plant'] },
+            { name: 'Rubber Plant', traits: ['bright-indirect', 'weekly-care', 'aesthetics', 'air-purify', 'large'], desc: 'Bold, glossy burgundy leaves. Easy care and grows into impressive floor plant.', badges: ['Bold Leaves', 'Air Purifier', 'Low Maintenance'] },
+            { name: 'Chinese Evergreen', traits: ['low-light', 'weekly-care', 'air-purify', 'ac-tolerant', 'pet-safe-no'], desc: 'Beautiful variegated leaves. Tolerates low light and air conditioning extremely well.', badges: ['Low Light', 'AC Tolerant', 'Variegated'] },
+            { name: 'Boston Fern', traits: ['medium-light', 'dedicated-care', 'air-purify', 'stress', 'pet-safe'], desc: 'Lush, cascading fronds. Excellent air purifier but needs consistent humidity.', badges: ['Pet Safe', 'Air Purifier', 'Lush'] },
+            { name: 'Monstera', traits: ['bright-indirect', 'regular-care', 'aesthetics', 'large', 'pet-safe-no'], desc: 'Instagram-famous split leaves. Makes bold statement and grows impressively large.', badges: ['Trendy', 'Statement', 'Fast Growing'] },
+            { name: 'Philodendron', traits: ['medium-light', 'weekly-care', 'stress', 'air-purify', 'pet-safe-no'], desc: 'Heart-shaped leaves, trailing growth. Very adaptable and easy to propagate.', badges: ['Easy Care', 'Trailing', 'Adaptable'] },
+            { name: 'Calathea', traits: ['medium-light', 'dedicated-care', 'aesthetics', 'pet-safe', 'flowering'], desc: 'Stunning patterned leaves. Pet-safe but needs consistent humidity and care.', badges: ['Pet Safe', 'Decorative', 'Unique Patterns'] },
+            { name: 'Anthurium', traits: ['bright-indirect', 'regular-care', 'flowering', 'aesthetics', 'pet-safe-no'], desc: 'Long-lasting red/pink heart-shaped flowers. Blooms almost year-round.', badges: ['Flowering', 'Colorful', 'Year-round Blooms'] },
+            { name: 'Jade Plant', traits: ['bright-direct', 'minimal-care', 'aesthetics', 'desktop', 'pet-safe-no'], desc: 'Succulent with thick, coin-shaped leaves. Symbol of good luck and prosperity.', badges: ['Succulent', 'Good Luck', 'Desktop Size'] },
+            { name: 'Dracaena', traits: ['medium-light', 'weekly-care', 'air-purify', 'large', 'pet-safe-no'], desc: 'Tall, architectural plant with sword-like leaves. Great for corners and empty spaces.', badges: ['Tall', 'Air Purifier', 'Architectural'] }
+        ];
+        
+        let currentQuestion = 0;
+        let answers = [];
+        
+        function renderQuestion() {
+            const q = questions[currentQuestion];
+            const card = document.getElementById('questionCard');
+            
+            card.innerHTML = `
+                <div class="question-icon">
+                    <i class="fas ${q.icon}"></i>
+                </div>
+                <h2>${q.title}</h2>
+                <p class="question-subtitle">${q.subtitle}</p>
+                <div class="answer-options">
+                    ${q.options.map((opt, i) => `
+                        <div class="answer-option ${answers[currentQuestion] === opt.value ? 'selected' : ''}" 
+                             onclick="selectAnswer('${opt.value}', this)">
+                            <div class="option-icon">${opt.icon}</div>
+                            <div class="option-text">
+                                <strong>${opt.title}</strong>
+                                <span>${opt.desc}</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            // Update progress
+            document.getElementById('currentQ').textContent = currentQuestion + 1;
+            document.getElementById('progressBar').style.width = ((currentQuestion + 1) / questions.length * 100) + '%';
+            
+            // Update buttons
+            document.getElementById('backBtn').disabled = currentQuestion === 0;
+            document.getElementById('nextBtn').disabled = !answers[currentQuestion];
+            document.getElementById('nextBtn').innerHTML = currentQuestion === questions.length - 1 
+                ? 'See Results <i class="fas fa-trophy"></i>' 
+                : 'Next <i class="fas fa-arrow-right"></i>';
+        }
+        
+        function selectAnswer(value, element) {
+            answers[currentQuestion] = value;
+            document.querySelectorAll('.answer-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('nextBtn').disabled = false;
+        }
+        
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                renderQuestion();
+            } else {
+                showResults();
+            }
+        }
+        
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                renderQuestion();
+            }
+        }
+        
+        function calculateRecommendations() {
+            // Score each plant based on answers
+            const scores = plants.map(plant => {
+                let score = 0;
+                const a = answers;
+                
+                // Light matching
+                if (a[0] === 'low' && plant.traits.includes('low-light')) score += 30;
+                if (a[0] === 'medium' && plant.traits.includes('medium-light')) score += 30;
+                if (a[0] === 'bright-indirect' && plant.traits.includes('bright-indirect')) score += 30;
+                if (a[0] === 'bright-direct' && plant.traits.includes('bright-direct')) score += 30;
+                
+                // Care level matching
+                if (a[1] === 'minimal' && plant.traits.includes('minimal-care')) score += 25;
+                if (a[1] === 'weekly' && plant.traits.includes('weekly-care')) score += 25;
+                if (a[1] === 'regular' && plant.traits.includes('regular-care')) score += 25;
+                if (a[1] === 'dedicated' && plant.traits.includes('dedicated-care')) score += 25;
+                
+                // Space matching
+                if (a[2] === 'desktop' && plant.traits.includes('desktop')) score += 15;
+                if ((a[2] === 'large' || a[2] === 'unlimited') && plant.traits.includes('large')) score += 15;
+                
+                // Benefit matching
+                if (a[3] === 'air-purify' && plant.traits.includes('air-purify')) score += 20;
+                if (a[3] === 'stress' && plant.traits.includes('stress')) score += 20;
+                if (a[3] === 'aesthetics' && plant.traits.includes('aesthetics')) score += 20;
+                if (a[3] === 'noise' && plant.traits.includes('noise')) score += 20;
+                
+                // Special requirements
+                if (a[4] === 'pet-safe' && plant.traits.includes('pet-safe')) score += 25;
+                if (a[4] === 'ac-tolerant' && plant.traits.includes('ac-tolerant')) score += 20;
+                if (a[4] === 'flowering' && plant.traits.includes('flowering')) score += 20;
+                if (a[4] === 'none') score += 10; // Slight bonus for flexibility
+                
+                // Penalty for pet-unsafe if pet-safe required
+                if (a[4] === 'pet-safe' && plant.traits.includes('pet-safe-no')) score -= 50;
+                
+                return { ...plant, score };
+            });
+            
+            // Sort by score and return top 3
+            return scores.sort((a, b) => b.score - a.score).slice(0, 3);
+        }
+        
+        function showResults() {
+            document.getElementById('quizSection').style.display = 'none';
+            document.getElementById('resultsSection').style.display = 'block';
+            
+            const recommendations = calculateRecommendations();
+            const container = document.getElementById('recommendationsContainer');
+            
+            container.innerHTML = recommendations.map((plant, i) => `
+                <div class="plant-recommendation ${i === 0 ? 'top-pick' : ''}">
+                    ${i === 0 ? '<div class="top-pick-badge"><i class="fas fa-star"></i> Top Pick</div>' : ''}
+                    <div class="plant-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="plant-details">
+                        <h3>${plant.name}</h3>
+                        <div class="match-score"><i class="fas fa-check-circle"></i> ${Math.min(98, 75 + i * -8 + Math.floor(plant.score / 5))}% Match</div>
+                        <p>${plant.desc}</p>
+                        <div class="plant-traits">
+                            ${plant.badges.map(badge => `<span class="trait-badge"><i class="fas fa-check"></i> ${badge}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        function restartQuiz() {
+            currentQuestion = 0;
+            answers = [];
+            document.getElementById('quizSection').style.display = 'block';
+            document.getElementById('resultsSection').style.display = 'none';
+            renderQuestion();
+        }
+        
+        // Initialize quiz
+        document.addEventListener('DOMContentLoaded', renderQuestion);
+    </script>
+</body>
+</html>
