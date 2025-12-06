@@ -1,7 +1,124 @@
 /**
  * Vertvista Website Enhancements CSS
- * Features: Page Loader, AOS Animations, Lightbox, Dark Mode, WhatsApp Widget, etc.
+ * Features: Page Loader, AOS Animations, Lightbox, Dark Mode, WhatsApp Widget, Quick Answer Boxes, etc.
  */
+
+/* ==========================================
+   0. QUICK ANSWER BOX (LLM Optimization)
+   ========================================== */
+.quick-answer-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-left: 5px solid #2e7d32;
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.quick-answer-box h3,
+.quick-answer-box .quick-answer-title {
+    color: #1b5e20;
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quick-answer-box h3 i,
+.quick-answer-box .quick-answer-title i {
+    color: #2e7d32;
+}
+
+.quick-answer-box p,
+.quick-answer-box .quick-answer-content {
+    color: #2e7d32;
+    line-height: 1.8;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.quick-answer-box .source {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #558b2f;
+    font-style: italic;
+}
+
+/* Key Takeaways Box */
+.key-takeaways-box {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-left: 5px solid #1565c0;
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.key-takeaways-box h3 {
+    color: #0d47a1;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.key-takeaways-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.key-takeaways-box li {
+    color: #1565c0;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+/* Comparison Table Styles */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.comparison-table th {
+    background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
+    color: white;
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.comparison-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tr:hover {
+    background: #f5f5f5;
+}
+
+.comparison-table .highlight {
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.comparison-table .check {
+    color: #2e7d32;
+}
+
+.comparison-table .cross {
+    color: #c62828;
+}
 
 /* ==========================================
    1. PAGE LOADER

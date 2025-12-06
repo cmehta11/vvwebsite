@@ -18,6 +18,74 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/maintenance-styles.css">
     <link rel="stylesheet" href="css/enhancements.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Plant Maintenance Services",
+      "name": "Professional Plant Maintenance AMC",
+      "description": "Comprehensive plant maintenance services including watering, pruning, fertilization, pest control, and plant replacement. Flexible AMC plans for offices, hotels, and commercial spaces across India.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Vertvista Eco Solutions Pvt. Ltd.",
+        "telephone": "+91-7045251178",
+        "email": "info@vertvista.com"
+      },
+      "areaServed": ["Mumbai", "Pune", "Bangalore", "Chennai", "Hyderabad", "Gujarat", "Delhi NCR"]
+    }
+    </script>
+    
+    <!-- FAQ Schema for LLM Discovery -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does plant maintenance cost in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plant maintenance AMC costs in India range from ₹8,500 to ₹50,000+ per month depending on the number of plants and service frequency. Basic AMC (20-30 plants, weekly visits): ₹8,500-12,000/month. Professional AMC (50-70 plants, bi-weekly): ₹15,000-25,000/month. Enterprise AMC (100+ plants, includes green walls): ₹30,000-50,000+/month. All plans include watering, pruning, fertilization, pest control, and plant replacement guarantee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in a plant maintenance AMC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A comprehensive plant maintenance AMC includes: regular watering (scheduled or sensor-based), pruning and shaping, fertilization (monthly/seasonal), pest and disease control, dust cleaning of leaves, soil aeration, pot rotation for even growth, plant health monitoring, replacement of unhealthy plants (100% guarantee), and detailed maintenance reports. Premium plans include irrigation system maintenance and seasonal plant changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should office plants be maintained?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Office plants typically need professional maintenance weekly or bi-weekly. Watering frequency depends on plant type (succulents: every 2-3 weeks; tropical plants: weekly). Air-conditioned offices may need more frequent watering due to lower humidity. Most corporate clients choose bi-weekly professional visits combined with basic staff watering between visits. Vertvista offers flexible scheduling based on plant needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer plant replacement guarantee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Vertvista offers a 100% plant replacement guarantee under all AMC plans. If any plant doesn't thrive despite proper maintenance, it will be replaced at no additional cost. This guarantee covers all indoor plants, green wall plants, and landscaped areas under maintenance contracts. The replacement is typically completed within 48-72 hours of reporting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get maintenance without buying plants from you?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Vertvista provides standalone maintenance services for existing plants regardless of where they were purchased. We'll first conduct a plant health audit and recommend any necessary replacements. Maintenance-only contracts are available for offices, hotels, hospitals, and residential complexes. We also service plants purchased from nurseries, garden centers, or other suppliers."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -47,12 +115,14 @@
                     </ul>
                 </li>
                 <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Resources</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="downloads.html">Downloads</a></li>
-                    </ul>
+                        <a href="#" class="nav-link">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="downloads.html">Downloads</a></li>
+                            <li><a href="biophilic-design-glossary.html">Glossary</a></li>
+                            <li><a href="biophilic-design-statistics.html">Statistics & Research</a></li>
+                        </ul>
                 </li>
                 <li class="nav-dropdown">
                     <a href="#" class="nav-link">Locations</a>
