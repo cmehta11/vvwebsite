@@ -313,6 +313,14 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Maintenance Checklist Tool -->
+  <url>
+    <loc>https://www.vertvista.com/maintenance-checklist.html</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- New Blog Posts - December 2025 -->
   <url>
     <loc>https://www.vertvista.com/pet-friendly-office-plants-india.html</loc>
