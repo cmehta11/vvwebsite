@@ -1,0 +1,847 @@
+/* ================================================
+   PREMIUM PAGE STYLES - Architect-Focused Design
+   Applied to all service and interior pages
+   ================================================ */
+
+/* ========================================
+   PAGE HERO - Premium Style Override
+   ======================================== */
+
+.page-hero {
+    position: relative;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 160px 24px 100px !important;
+    background: linear-gradient(165deg, var(--sage-900) 0%, var(--sage-800) 40%, var(--sage-700) 100%) !important;
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50m-40 0a40,40 0 1,1 80,0a40,40 0 1,1 -80,0' fill='none' stroke='%23ffffff' stroke-width='0.3' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, var(--sage-800), transparent);
+    pointer-events: none;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero h1 {
+    font-family: var(--font-display) !important;
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 400 !important;
+    color: var(--white) !important;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.page-hero p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto !important;
+    opacity: 1 !important;
+}
+
+/* Hero badge/label */
+.page-hero .hero-label,
+.page-hero .section-label {
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--terracotta-300);
+    background: rgba(207, 133, 101, 0.15);
+    border: 1px solid rgba(207, 133, 101, 0.3);
+    border-radius: 100px;
+    margin-bottom: 24px;
+}
+
+/* ========================================
+   INTRO SECTION - Premium Style
+   ======================================== */
+
+.intro-section {
+    padding: 100px 24px !important;
+    background: var(--white) !important;
+}
+
+.intro-section .container,
+.intro-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.intro-section .section-label,
+.intro-content .section-label {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--primary);
+    background: var(--sage-100);
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.intro-section h2,
+.intro-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.intro-section p.lead,
+.intro-content p.lead {
+    font-size: 1.2rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.9 !important;
+    font-weight: 400 !important;
+}
+
+/* ========================================
+   FEATURE SECTIONS - Premium Grid
+   ======================================== */
+
+.features-section,
+.services-section,
+.content-section {
+    padding: 100px 24px;
+}
+
+.features-section .container,
+.services-section .container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.features-grid,
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+/* Feature Cards - Premium Style */
+.feature-card,
+.service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px 32px;
+    transition: all 0.4s var(--ease-out);
+}
+
+.feature-card:hover,
+.service-card:hover {
+    border-color: var(--sage-300);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+}
+
+.feature-card .icon,
+.service-card .icon,
+.feature-card i:first-child,
+.service-card i:first-child {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--primary);
+    background: var(--sage-100);
+    border-radius: 18px;
+    margin-bottom: 24px;
+    transition: all 0.3s var(--ease-out);
+}
+
+.feature-card:hover .icon,
+.service-card:hover .icon,
+.feature-card:hover i:first-child,
+.service-card:hover i:first-child {
+    background: var(--sage-200);
+    transform: scale(1.05);
+}
+
+.feature-card h3,
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.feature-card p,
+.service-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ========================================
+   COMPARISON/TYPES SECTIONS
+   ======================================== */
+
+.types-section,
+.comparison-section {
+    padding: 100px 24px;
+    background: var(--neutral-50);
+}
+
+.types-grid,
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.type-card,
+.comparison-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-out);
+}
+
+.type-card:hover,
+.comparison-card:hover {
+    border-color: var(--sage-300);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+}
+
+.type-card .card-header,
+.comparison-card .card-header {
+    padding: 32px;
+    background: linear-gradient(145deg, var(--sage-100) 0%, var(--sage-200) 100%);
+    text-align: center;
+}
+
+.type-card .card-header i,
+.comparison-card .card-header i {
+    font-size: 3rem;
+    color: var(--sage-500);
+    margin-bottom: 16px;
+}
+
+.type-card .card-header h3,
+.comparison-card .card-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.type-card .card-body,
+.comparison-card .card-body {
+    padding: 32px;
+}
+
+.type-card .card-body p,
+.comparison-card .card-body p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   STATS/BENEFITS SECTIONS
+   ======================================== */
+
+.stats-section,
+.benefits-section {
+    padding: 80px 24px;
+    background: var(--white);
+}
+
+.stats-grid,
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card,
+.benefit-card {
+    text-align: center;
+    padding: 40px 24px;
+    background: var(--neutral-50);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: all 0.3s var(--ease-out);
+}
+
+.stat-card:hover,
+.benefit-card:hover {
+    background: var(--white);
+    border-color: var(--sage-300);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card .number,
+.stat-card h3 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-card .label,
+.stat-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ========================================
+   PRICING/PACKAGES SECTION
+   ======================================== */
+
+.pricing-section,
+.packages-section {
+    padding: 100px 24px;
+    background: linear-gradient(180deg, var(--neutral-50) 0%, var(--white) 100%);
+}
+
+.pricing-grid,
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pricing-card,
+.package-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px 32px;
+    text-align: center;
+    transition: all 0.4s var(--ease-out);
+}
+
+.pricing-card:hover,
+.package-card:hover {
+    border-color: var(--sage-300);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+}
+
+.pricing-card.featured,
+.package-card.featured {
+    border-color: var(--primary);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-card .price,
+.package-card .price {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.pricing-card .price-period,
+.package-card .price-period {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+/* ========================================
+   FAQ SECTION - Premium Style
+   ======================================== */
+
+.faq-section {
+    padding: 100px 24px;
+    background: var(--white);
+}
+
+.faq-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-list,
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item,
+.accordion-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s var(--ease-out);
+}
+
+.faq-item:hover,
+.accordion-item:hover {
+    border-color: var(--sage-300);
+}
+
+.faq-item.active,
+.accordion-item.active {
+    border-color: var(--sage-400);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.faq-question,
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 28px;
+    cursor: pointer;
+    transition: background 0.3s var(--ease-out);
+}
+
+.faq-question:hover,
+.accordion-header:hover {
+    background: var(--neutral-50);
+}
+
+.faq-question h3,
+.accordion-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    flex: 1;
+    line-height: 1.5;
+}
+
+.faq-question i,
+.accordion-header i {
+    font-size: 0.85rem;
+    color: var(--primary);
+    transition: transform 0.3s var(--ease-out);
+}
+
+.faq-item.active .faq-question i,
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.faq-answer,
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease-out);
+}
+
+.faq-item.active .faq-answer,
+.accordion-item.active .accordion-body {
+    max-height: 500px;
+}
+
+.faq-answer p,
+.accordion-body p {
+    padding: 0 28px 28px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ========================================
+   CTA SECTION - Premium Style
+   ======================================== */
+
+.cta-section {
+    padding: 100px 24px !important;
+    background: linear-gradient(165deg, var(--sage-700) 0%, var(--sage-800) 100%) !important;
+    text-align: center;
+}
+
+.cta-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    font-family: var(--font-display) !important;
+    font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
+    font-weight: 400 !important;
+    color: var(--white) !important;
+    margin-bottom: 16px !important;
+}
+
+.cta-section p {
+    font-size: 1.15rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin-bottom: 36px !important;
+}
+
+.cta-section .cta-buttons,
+.cta-section .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* ========================================
+   SECTION HEADERS - Premium Style
+   ======================================== */
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-header .section-label {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--primary);
+    background: var(--sage-100);
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.section-header h2,
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.section-header p,
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ========================================
+   PROCESS/TIMELINE SECTIONS
+   ======================================== */
+
+.process-section,
+.timeline-section {
+    padding: 100px 24px;
+    background: var(--neutral-50);
+}
+
+.process-steps,
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-step,
+.timeline-item {
+    position: relative;
+    text-align: center;
+    padding: 40px 24px;
+}
+
+.process-step .step-number,
+.timeline-item .step-number {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    background: var(--primary);
+    border-radius: 50%;
+    margin: 0 auto 24px;
+}
+
+.process-step h3,
+.timeline-item h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.process-step p,
+.timeline-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ========================================
+   TESTIMONIALS - Premium Style
+   ======================================== */
+
+.testimonials-section {
+    padding: 100px 24px;
+    background: var(--white);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: var(--neutral-50);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px;
+    transition: all 0.3s var(--ease-out);
+}
+
+.testimonial-card:hover {
+    background: var(--white);
+    border-color: var(--sage-300);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.testimonial-card .quote {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.testimonial-card .author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.testimonial-card .author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--sage-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--sage-600);
+}
+
+.testimonial-card .author-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.testimonial-card .author-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ========================================
+   BUTTON REFINEMENTS
+   ======================================== */
+
+.btn,
+button[type="submit"],
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 32px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+    text-decoration: none;
+}
+
+.btn:hover,
+button[type="submit"]:hover,
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary,
+.btn-outline {
+    color: var(--primary);
+    background: transparent;
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+    color: var(--white);
+    background: var(--primary);
+}
+
+.btn-white {
+    color: var(--sage-800);
+    background: var(--white);
+    border-color: var(--white);
+}
+
+.btn-white:hover {
+    background: var(--terracotta-300);
+    border-color: var(--terracotta-300);
+    color: var(--neutral-900);
+}
+
+.btn-lg {
+    padding: 18px 40px;
+    font-size: 1rem;
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+    .page-hero {
+        min-height: auto;
+        padding: 140px 20px 80px !important;
+    }
+    
+    .intro-section {
+        padding: 80px 20px !important;
+    }
+    
+    .features-section,
+    .services-section,
+    .content-section,
+    .pricing-section,
+    .faq-section,
+    .cta-section {
+        padding: 80px 20px !important;
+    }
+    
+    .features-grid,
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-header {
+        margin-bottom: 48px;
+    }
+    
+    .cta-section .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ========================================
+   LEGACY STYLE OVERRIDES
+   ======================================== */
+
+/* Override old color schemes */
+.page-hero,
+[class*="hero"] {
+    background: linear-gradient(165deg, var(--sage-900) 0%, var(--sage-800) 40%, var(--sage-700) 100%) !important;
+}
+
+/* Override old button styles */
+.btn-primary,
+.button-primary,
+a.btn-primary {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+    border-radius: 100px !important;
+}
+
+.btn-primary:hover,
+.button-primary:hover,
+a.btn-primary:hover {
+    background: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+/* Ensure consistent font usage */
+h1, h2, h3 {
+    font-family: var(--font-display), Georgia, serif !important;
+}
+
+h4, h5, h6, p, span, a, li {
+    font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Remove old lime green accents */
+.bg-primary,
+.text-primary,
+[style*="#CCFF00"],
+[style*="rgb(204, 255, 0)"] {
+    background-color: var(--sage-600) !important;
+}
