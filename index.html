@@ -23,6 +23,9 @@
     
     <!-- CSS - Premium Design System -->
     <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/homepage-premium.css">
+    <link rel="stylesheet" href="css/components-premium.css">
     <link rel="stylesheet" href="css/premium-pages.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/enhancements.css">
@@ -288,48 +291,95 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Hero Section - Premium Redesign -->
+    <section class="hero hero-premium" id="hero">
+        <!-- Background Elements -->
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-floating-elements">
+            <svg class="floating-leaf" viewBox="0 0 24 24" fill="currentColor"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+            <svg class="floating-leaf" viewBox="0 0 24 24" fill="currentColor"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+            <svg class="floating-leaf" viewBox="0 0 24 24" fill="currentColor"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+        </div>
+        
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-in">India's Trusted Biophilia & Greening Partner</h1>
-                <p class="hero-subtitle animate-fade-in delay-1">Comprehensive nature-integrated solutions for corporates, architects, developers, institutions & facility managers</p>
-                <div class="hero-tagline animate-fade-in delay-2">
-                    <span>Breathe</span> • <span>Grow</span> • <span>Thrive</span>
+            <div class="hero-content-premium">
+                <!-- Eyebrow -->
+                <div class="hero-eyebrow animate-fade-in">
+                    <span class="dot"></span>
+                    <span>India's Leading Biophilic Design Company</span>
                 </div>
                 
-                <!-- Trust Badges -->
-                <div class="trust-badges animate-fade-in delay-3">
-                    <div class="badge">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>12+ Years</span>
+                <!-- Title -->
+                <h1 class="hero-title-premium animate-fade-in delay-1">
+                    Transform Spaces with <span class="highlight">Nature-Inspired</span> Design
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="hero-subtitle-premium animate-fade-in delay-2">
+                    Premium biophilic solutions for architects, designers, and forward-thinking organizations. We bring nature indoors with scientific precision and artistic vision.
+                </p>
+                
+                <!-- Tagline -->
+                <div class="hero-tagline-premium animate-fade-in delay-3">
+                    <span>Breathe</span>
+                    <span class="separator"></span>
+                    <span>Grow</span>
+                    <span class="separator"></span>
+                    <span>Thrive</span>
+                </div>
+                
+                <!-- Premium Trust Badges -->
+                <div class="trust-badges-premium animate-fade-in delay-4">
+                    <div class="trust-badge-premium">
+                        <div class="icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="text">
+                            <div class="number">12+</div>
+                            <div class="label">Years Experience</div>
+                        </div>
                     </div>
-                    <div class="badge">
-                        <i class="fas fa-building"></i>
-                        <span>1000+ Projects & Workspaces</span>
+                    <div class="trust-badge-premium">
+                        <div class="icon"><i class="fas fa-building"></i></div>
+                        <div class="text">
+                            <div class="number">1000+</div>
+                            <div class="label">Projects Delivered</div>
+                        </div>
                     </div>
-                    <div class="badge">
-                        <i class="fas fa-handshake"></i>
-                        <span>200+ Clients</span>
+                    <div class="trust-badge-premium">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <div class="text">
+                            <div class="number">200+</div>
+                            <div class="label">Corporate Clients</div>
+                        </div>
                     </div>
-                    <div class="badge">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>6 Cities</span>
+                    <div class="trust-badge-premium">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <div class="number">6</div>
+                            <div class="label">Cities Across India</div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="hero-cta animate-fade-in delay-4">
-                    <a href="get-started.html" class="btn-primary btn-large">Get Started</a>
-                    <a href="gallery.html" class="btn-secondary btn-large">View Gallery</a>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-cta-premium animate-fade-in delay-5">
+                    <a href="get-started.html" class="btn-hero-primary">
+                        Start Your Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="gallery.html" class="btn-hero-secondary">
+                        <i class="fas fa-images"></i> View Portfolio
+                    </a>
                 </div>
             </div>
         </div>
         
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+        <!-- Premium Scroll Indicator -->
+        <div class="scroll-indicator-premium">
+            <span>Scroll to explore</span>
+            <div class="scroll-mouse"></div>
         </div>
     </section>
 
@@ -925,5 +975,6 @@
     <script src="js/script.js"></script>
     <script src="js/india-map.js"></script>
     <script src="js/enhancements.js"></script>
+    <script src="js/premium.js"></script>
 </body>
 </html>
